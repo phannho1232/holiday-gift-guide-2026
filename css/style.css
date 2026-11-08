@@ -69,6 +69,7 @@ a:hover{text-decoration:underline;color:#5C2E0A}
 .ftc-inline-notice{background:#F5EDE3;border-left:3px solid #C5A55A;border-radius:6px;padding:10px 14px;font-size:13px;color:#5C4636;margin-bottom:20px;line-height:1.5}
 .ftc-inline-notice a{color:#8B4513;font-weight:600;text-decoration:underline}
 .shipping-cutoff-alert{background:#FFF4E5;border:1.5px solid #C5A55A;border-radius:8px;padding:14px 18px;margin-bottom:20px;font-size:14px;color:#2C1810;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.shipping-cutoff-alert[hidden],.filter-status[hidden]{display:none!important}
 .filter-status{background:#fff;border:1.5px dashed #C5A55A;border-radius:10px;padding:18px 20px;margin-bottom:24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .filter-status__text{font-size:14px;color:#2C1810;line-height:1.5}
 .filter-status__reset{padding:8px 16px;background:#2C1810;color:#fff;border:none;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit}
