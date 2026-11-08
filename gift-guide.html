@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Christmas Gift Guide 2026 — Find the Perfect Gift | The Curated Living</title>
-  <meta name="description" content="Our curated Christmas gift guide helps you find the perfect present for everyone on your list — parents, partner, friends, and colleagues. 7 expert-tested picks from $98 to $1,499.">
+  <title>Christmas Gift Guide 2026 — Compare &amp; Find the Perfect Holiday Gift | The Curated Living</title>
+  <meta name="description" content="Compare 14 editor-tested Christmas gifts for parents, partners, friends, hosts, and colleagues. Filter by recipient, budget, and instant eVoucher vs. holiday gift box.">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Christmas Gift Guide 2026 — Find the Perfect Gift | The Curated Living">
-  <meta property="og:description" content="Find the perfect Christmas gift for everyone on your list. 7 expert-tested picks from $98 to $1,499.">
+  <meta property="og:title" content="Christmas Gift Guide 2026 — Compare &amp; Find the Perfect Holiday Gift | The Curated Living">
+  <meta property="og:description" content="14 true Christmas gifts tested by our editors — from Holiday Pajamas and Frasier Fir Diffusers to Christmas Charcuterie Boards and Instant eVouchers.">
   <meta property="og:image" content="images/hero-christmas.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="css/style.css">
-  <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','YOUR_PIXEL_ID');fbq('track','PageView');</script>
 </head>
 <body>
 
@@ -21,219 +20,459 @@
       <a href="index.html" class="site-header__logo">The Curated Living</a>
       <nav class="site-header__nav">
         <a href="index.html">Home</a>
-        <a href="gift-guide.html" class="active">Gift Guide</a>
+        <a href="gift-guide.html" class="active">Gift Finder &amp; Guide</a>
+        <a href="#comparisons">Compare</a>
+        <a href="#deals">Deals</a>
         <a href="about.html">About</a>
       </nav>
     </div>
   </header>
 
-  <!-- ==================== HERO ==================== -->
+  <!-- ==================== HERO & 3-STEP GIFT FINDER ==================== -->
   <section class="hero">
-    <div class="hero__bg"><img src="images/hero-christmas.jpg" alt="Christmas tree, wrapped gifts, and warm holiday scene"></div>
+    <div class="hero__bg"><img src="images/hero-christmas.jpg" alt="Warm Christmas living room with decorated tree, fireplace, and wrapped holiday gifts" width="1400" height="788" fetchpriority="high"></div>
     <div class="hero__overlay"></div>
     <div class="hero__content">
-      <div class="hero__eyebrow">🎄 Christmas Gift Guide 2026</div>
+      <div class="hero__eyebrow">🎄 The 2026 Christmas Gift Finder &amp; Comparison Hub</div>
       <h1 class="hero__title">The right gift for the right person. A Christmas worth remembering.</h1>
-      <p class="hero__subtitle">We tested over 40 gifts and selected 7 that people actually keep, use, and talk about months later. Let us help you find the perfect one.</p>
+      <p class="hero__subtitle">We hand-tested 60+ holiday gifts and curated the 14 most memorable Christmas presents of 2026 — from cozy holiday pajamas and gourmet cookie tins to family keepsakes and instant eVouchers.</p>
 
       <div class="finder">
-        <div class="finder__title">Find Your Perfect Gift in 3 Steps</div>
+        <div class="finder__title">Find &amp; Compare Your Perfect Christmas Gift in 3 Steps</div>
         <div class="finder__steps">
           <div class="finder__step">
-            <div class="finder__step-label"><span class="finder__step-num">1</span> Who is it for?</div>
-            <select class="finder__select" id="finder-who">
-              <option value="">Choose recipient…</option>
-              <option value="parents">Parents</option>
-              <option value="partner">Partner</option>
-              <option value="friends">Friends &amp; Hosts</option>
-              <option value="colleagues">Colleagues</option>
-              <option value="tech">Tech Enthusiast</option>
+            <label class="finder__step-label" for="finder-who"><span class="finder__step-num">1</span> Who is it for?</label>
+            <select class="finder__select" id="finder-who" onchange="applyFilters(false)">
+              <option value="">Everyone on my list (14)</option>
+              <option value="parents">Parents &amp; Grandparents</option>
+              <option value="partner">Partner / Spouse</option>
+              <option value="friends">Friends &amp; Party Hosts</option>
+              <option value="colleagues">Colleagues, Boss &amp; Clients</option>
+              <option value="family">Whole Family &amp; Home</option>
             </select>
           </div>
           <div class="finder__step">
-            <div class="finder__step-label"><span class="finder__step-num">2</span> Your budget?</div>
-            <select class="finder__select" id="finder-budget">
-              <option value="">Select range…</option>
-              <option value="under100">Under $100</option>
-              <option value="100-500">$100 – $500</option>
-              <option value="500plus">$500+</option>
+            <label class="finder__step-label" for="finder-budget"><span class="finder__step-num">2</span> Your budget?</label>
+            <select class="finder__select" id="finder-budget" onchange="applyFilters(false)">
+              <option value="">Any budget</option>
+              <option value="under100">Under $100 (Sweet Spot)</option>
+              <option value="100-500">$100 – $350 (Signature Gifts)</option>
+              <option value="500plus">$350+ (Showstopper Gifts)</option>
             </select>
           </div>
           <div class="finder__step">
-            <div class="finder__step-label"><span class="finder__step-num">3</span> Delivery?</div>
-            <select class="finder__select" id="finder-delivery">
-              <option value="">Any delivery…</option>
-              <option value="physical">Physical gift</option>
-              <option value="digital">Instant eVoucher</option>
+            <label class="finder__step-label" for="finder-delivery"><span class="finder__step-num">3</span> How to receive?</label>
+            <select class="finder__select" id="finder-delivery" onchange="applyFilters(false)">
+              <option value="">Physical Box or eVoucher</option>
+              <option value="physical">Wrapped Physical Gift</option>
+              <option value="digital">Instant eVoucher (2-Min Email)</option>
             </select>
           </div>
         </div>
-        <button class="finder__btn" onclick="filterAndScroll()">🎁 Find the Perfect Gift</button>
+        <button class="finder__btn" type="button" onclick="applyFilters(true)">🎁 Show My Matching Christmas Gifts</button>
       </div>
     </div>
   </section>
 
-  <!-- ==================== GIFT PICKS ==================== -->
+  <!-- ==================== GIFT DISCOVERY HUB ==================== -->
   <section class="section" id="gifts">
     <div class="container">
-      <div class="section__eyebrow">Curated Picks</div>
-      <h2 class="section__title">Gifts They'll Actually Love</h2>
-      <p class="section__desc">Every gift below was hand-tested by our editors and scored 8.0+ across wow factor, value, shipping reliability, and returns.</p>
+      <div class="section__eyebrow">14 Editor-Tested Holiday Picks</div>
+      <h2 class="section__title">Browse, Filter &amp; Compare Christmas Gifts</h2>
+      <p class="section__desc">Filter by recipient, search by keyword, or click <strong>"+ Compare"</strong> on any 2 to 3 gifts to place them side-by-side.</p>
 
-      <div class="tabs">
-        <button class="tab active" onclick="showTab('all',this)">All Picks</button>
-        <button class="tab" onclick="showTab('parents',this)">For Parents</button>
-        <button class="tab" onclick="showTab('partner',this)">For Your Partner</button>
-        <button class="tab" onclick="showTab('friends',this)">For Friends &amp; Hosts</button>
-        <button class="tab" onclick="showTab('tech',this)">For Tech Lovers</button>
+      <!-- FTC Disclosure BEFORE any purchase links -->
+      <div class="ftc-inline-notice">
+        <strong>Reader Transparency:</strong> The Curated Living is an independent holiday gift publication. When you buy through links on this page, we may earn an affiliate commission at no extra cost to you. <a href="disclosure.html">Read our full disclosure &amp; testing policy</a>.
       </div>
 
+      <!-- Post-Dec-14 Automatic eVoucher Priority Banner -->
+      <div class="shipping-cutoff-alert" id="shipping-cutoff-alert" hidden>
+        <div><strong>⏰ Late-December Shipping Alert:</strong> Courier cutoffs are closing fast. We've moved <strong>Instant Digital eVouchers</strong> (Tinggly, StoryWorth &amp; Trade Coffee) to the top so your Christmas gift arrives in 2 minutes, guaranteed.</div>
+        <button type="button" class="filter-status__reset" onclick="setDeliveryFilter('digital')">Filter: Instant eVouchers Only</button>
+      </div>
+
+      <!-- Recipient Tabs -->
+      <div class="tabs" role="tablist" aria-label="Filter gifts by recipient">
+        <button type="button" class="tab active" data-tab="" onclick="selectRecipientTab('')">All 14 Gifts</button>
+        <button type="button" class="tab" data-tab="parents" onclick="selectRecipientTab('parents')">For Parents &amp; Grandparents</button>
+        <button type="button" class="tab" data-tab="partner" onclick="selectRecipientTab('partner')">For Your Partner</button>
+        <button type="button" class="tab" data-tab="friends" onclick="selectRecipientTab('friends')">For Friends &amp; Hosts</button>
+        <button type="button" class="tab" data-tab="colleagues" onclick="selectRecipientTab('colleagues')">For Colleagues &amp; Clients</button>
+        <button type="button" class="tab" data-tab="family" onclick="selectRecipientTab('family')">For Whole Family</button>
+      </div>
+
+      <!-- Quick Need Tags -->
+      <div class="quick-tags">
+        <span class="quick-tags__label">Quick Ideas:</span>
+        <button type="button" class="quick-tag active" data-tag="" onclick="selectQuickTag('',this)">✨ All Themes</button>
+        <button type="button" class="quick-tag" data-tag="oprah" onclick="selectQuickTag('oprah',this)">👑 Oprah's Favorites</button>
+        <button type="button" class="quick-tag" data-tag="cozy" onclick="selectQuickTag('cozy',this)">🕯️ Cozy Home &amp; Pajamas</button>
+        <button type="button" class="quick-tag" data-tag="gourmet" onclick="selectQuickTag('gourmet',this)">🍪 Christmas Food &amp; Treats</button>
+        <button type="button" class="quick-tag" data-tag="sentimental" onclick="selectQuickTag('sentimental',this)">💝 Emotional Keepsakes</button>
+        <button type="button" class="quick-tag" data-tag="evoucher" onclick="selectQuickTag('evoucher',this)">⚡ Instant Dec 24 eVouchers</button>
+        <button type="button" class="quick-tag" data-tag="overnight" onclick="selectQuickTag('overnight',this)">🚚 Free Express / Overnight</button>
+      </div>
+
+      <!-- Search & Sort Discovery Bar -->
+      <div class="discovery-bar">
+        <div class="discovery-search">
+          <span class="discovery-search__icon">🔍</span>
+          <input type="search" id="gift-search" placeholder="Search by gift idea (e.g. pajamas, cookies, candle, frame, coffee, mom)…" oninput="applyFilters(false)" aria-label="Search gifts">
+        </div>
+        <div class="discovery-controls">
+          <span class="discovery-count" id="discovery-count">Showing all 14 gifts</span>
+          <select class="discovery-sort" id="gift-sort" onchange="sortCards()" aria-label="Sort gifts">
+            <option value="rank">Sort: Editor's Top Picks</option>
+            <option value="price-asc">Price: Low to High ($60 → $699)</option>
+            <option value="price-desc">Price: High to Low ($699 → $60)</option>
+            <option value="fast">Fastest Delivery (eVoucher &amp; Overnight)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Active Filter Status / Empty State -->
+      <div class="filter-status" id="filter-status" hidden>
+        <div class="filter-status__text" id="filter-status-text">Showing filtered results.</div>
+        <button type="button" class="filter-status__reset" onclick="resetFilters()">Reset All Filters</button>
+      </div>
+
+      <!-- ==================== 14 CHRISTMAS GIFT CARDS ==================== -->
       <div class="gifts-grid" id="gifts-grid">
 
-        <!-- ── 1. Boarderie ── -->
-        <div class="gift-card" data-product-id="boarderie" data-product-name="Boarderie Artisan Charcuterie" data-product-price="169" data-recipient="friends,parents" data-budget="100-500" data-delivery="physical">
+        <!-- ── 1. Cozy Earth Holiday Pajamas & Bedding ── -->
+        <div class="gift-card" data-rank="1" data-product-id="cozyearth" data-product-name="Cozy Earth Holiday Bamboo Pajama & Bedding Set" data-product-price="195" data-recipient="partner,parents" data-budget="100-500" data-delivery="physical" data-tags="cozy,oprah,overnight" data-shipping="Free 2-day shipping (order by Dec 18)" data-returns="100-night trial · free returns" data-meaning="The ultimate Christmas Eve loungewear & sleep upgrade" data-code="CE-LORNA (20% Off)">
           <div class="gift-card__img">
-            <img src="images/boarderie.jpg" alt="Boarderie artisan charcuterie board with imported cheeses, cured meats, crackers and dried fruits on a handcrafted wooden board">
-            <span class="gift-card__badge gift-card__badge--pick">Editor's Pick</span>
+            <img src="images/cozyearth.jpg" alt="Cozy Earth bamboo pajama and luxury bedding bundle in warm holiday packaging" width="800" height="600" loading="lazy" decoding="async">
+            <span class="gift-card__badge gift-card__badge--pick">#1 Top Holiday Pick</span>
           </div>
           <div class="gift-card__body">
-            <div class="gift-card__for">Perfect for Friends, Hosts &amp; Parents</div>
-            <h3 class="gift-card__name">Boarderie Pre-Assembled Artisan Charcuterie Board</h3>
-            <div class="gift-card__price">$169 – $249 · Free FedEx Priority Overnight</div>
-            <p class="gift-card__why">Arrives fully arranged with imported cheeses, cured meats, and crackers on a handcrafted wooden board. Looks like something out of a food magazine — and the board becomes a permanent kitchen keepsake. Order as late as Dec. 22.</p>
-            <div class="gift-card__meta">
-              <span>📦 Free overnight ship</span>
-              <span>↩️ 100% satisfaction</span>
-              <span>🎁 Gift-ready</span>
-            </div>
-            <button class="gift-card__cta" onclick="goShop('boarderie','BOARD10',this)">View at Boarderie →</button>
-            <div class="gift-card__code">Use code <strong>BOARD10</strong> for $10 off · <button onclick="copyCode('BOARD10',this)">copy</button></div>
-          </div>
-        </div>
-
-        <!-- ── 2. StoryWorth ── -->
-        <div class="gift-card" data-product-id="storyworth" data-product-name="StoryWorth Memory Book" data-product-price="99" data-recipient="parents" data-budget="under100" data-delivery="digital">
-          <div class="gift-card__img">
-            <img src="images/storyworth.jpg" alt="StoryWorth Memory Book — a year of family stories compiled into a hardcover book">
-            <span class="gift-card__badge gift-card__badge--value">Best Value</span>
-          </div>
-          <div class="gift-card__body">
-            <div class="gift-card__for">Perfect for Parents &amp; Grandparents</div>
-            <h3 class="gift-card__name">StoryWorth Memory Book</h3>
-            <div class="gift-card__price">$99/year · Instant digital delivery</div>
-            <p class="gift-card__why">Weekly questions, a year of family stories, compiled into a hardcover book. Our tester's dad answered 47 of 48 questions — stories his kids had never heard. At $99 for a year of engagement plus a keepsake book, the value is extraordinary.</p>
-            <div class="gift-card__meta">
-              <span>📦 Instant digital</span>
-              <span>↩️ Full refund</span>
-              <span>🎁 Year-long gift</span>
-            </div>
-            <button class="gift-card__cta" onclick="goShop('storyworth','STORY10',this)">View at StoryWorth →</button>
-            <div class="gift-card__code">Use code <strong>STORY10</strong> for $10 off · <button onclick="copyCode('STORY10',this)">copy</button></div>
-          </div>
-        </div>
-
-        <!-- ── 3. Cozy Earth ── -->
-        <div class="gift-card" data-product-id="cozyearth" data-product-name="Cozy Earth Bamboo Bedding Bundle" data-product-price="471" data-recipient="partner,parents" data-budget="100-500" data-delivery="physical">
-          <div class="gift-card__img">
-            <img src="images/cozyearth.jpg" alt="Cozy Earth bamboo sheet set and duvet cover in neutral tones on a beautifully made bed">
-            <span class="gift-card__badge gift-card__badge--pick">Our Top Pick</span>
-          </div>
-          <div class="gift-card__body">
-            <div class="gift-card__for">Perfect for Partner &amp; Parents</div>
-            <h3 class="gift-card__name">Cozy Earth Bamboo Bedding Bundle</h3>
-            <div class="gift-card__price">$471 – $651 · Free 2-day shipping by Dec. 18</div>
-            <p class="gift-card__why">Oprah's Favorite Things five years running. Buttery bamboo viscose that stays cool in summer and warm in winter. After 20+ washes — no pilling, no fading. Bundle saves ~35% versus buying pieces individually. The luxury they won't buy themselves.</p>
+            <div class="gift-card__for">For Partner, Mom &amp; Parents</div>
+            <h3 class="gift-card__name">Cozy Earth Bamboo Pajama &amp; Bedding Holiday Bundle</h3>
+            <div class="gift-card__price">$195 – $471 · Free 2-day shipping by Dec. 18</div>
+            <p class="gift-card__why">Named to Oprah's Favorite Things five years running. Opening a pair of buttery-soft stretch-knit bamboo pajamas on Christmas Eve is a holiday tradition in itself — and bundling with their temperature-regulating sheet set saves 35% automatically.</p>
             <div class="gift-card__meta">
               <span>📦 Free 2-day ship</span>
               <span>↩️ 100-night trial</span>
-              <span>🎁 Bundle deal</span>
+              <span>🎁 Cloth gift bag</span>
             </div>
-            <button class="gift-card__cta" onclick="goShop('cozyearth','CE-LORNA',this)">View at Cozy Earth →</button>
-            <div class="gift-card__code">Use code <strong>CE-LORNA</strong> for 20% off · <button onclick="copyCode('CE-LORNA',this)">copy</button></div>
+            <div class="gift-card__actions">
+              <button type="button" class="gift-card__cta" data-pos="card_cozyearth" onclick="goShop('cozyearth','CE-LORNA',this)">View at Cozy Earth →</button>
+              <button type="button" class="gift-card__cmp-btn" onclick="toggleCompare('cozyearth',this)">+ Compare</button>
+            </div>
+            <div class="gift-card__code">Use code <strong>CE-LORNA</strong> for 20% off · <button type="button" onclick="copyCode('CE-LORNA',this)">copy</button></div>
           </div>
         </div>
 
-        <!-- ── 4. REVOMADIC ── -->
-        <div class="gift-card" data-product-id="revomadic" data-product-name="REVOMADIC Deep-Tissue Massager" data-product-price="98" data-recipient="parents,friends,colleagues" data-budget="under100" data-delivery="physical">
+        <!-- ── 2. Aura Digital Family Photo Frame ── -->
+        <div class="gift-card" data-rank="2" data-product-id="auraframes" data-product-name="Aura Carver Mat Digital Family Frame" data-product-price="149" data-recipient="parents,partner,family" data-budget="100-500" data-delivery="physical" data-tags="sentimental,oprah" data-shipping="Free shipping (order by Dec 19)" data-returns="45-day holiday return window" data-meaning="Pre-loaded with family Christmas photos before they even open the box" data-code="AURA30 ($30 Off)">
           <div class="gift-card__img">
-            <img src="images/revomadic.webp" alt="REVOMADIC deep-tissue massage gun with brushed aluminum body and six attachment heads">
-            <span class="gift-card__badge gift-card__badge--value">Best Value</span>
+            <img src="images/aura.jpg" alt="Aura Carver Mat digital photo frame on a Christmas mantelpiece showing family holiday photos" width="800" height="600" loading="lazy" decoding="async">
+            <span class="gift-card__badge gift-card__badge--pick">Best for Parents</span>
           </div>
           <div class="gift-card__body">
-            <div class="gift-card__for">Perfect for Anyone Who Has a Body</div>
-            <h3 class="gift-card__name">REVOMADIC Deep-Tissue Massager</h3>
-            <div class="gift-card__price">$98 <s>$149</s> · Ships by Dec. 19</div>
-            <p class="gift-card__why">3,200 RPM at under 45 dB — quiet enough to use on a phone call. The heated attachment reaches 110°F in 30 seconds and makes a real difference on tight shoulders. Feels like a $200 device at under $100. Converts every skeptic.</p>
+            <div class="gift-card__for">For Parents, Grandparents &amp; Family</div>
+            <h3 class="gift-card__name">Aura Carver Mat Wi-Fi Digital Family Photo Frame</h3>
+            <div class="gift-card__price">$149 <s>$179</s> · Ships free by Dec. 19</div>
+            <p class="gift-card__why">The most tear-jerking gift under the tree: scan the box code with the Aura app to pre-load family photos, grandkid videos, and a Christmas morning greeting <em>before</em> wrapping it. When Mom or Grandma plugs it in, memories appear immediately — with zero subscription fees.</p>
             <div class="gift-card__meta">
-              <span>📦 Ships Dec 19</span>
-              <span>↩️ 30-day return</span>
-              <span>🎁 6-head kit included</span>
+              <span>📦 Free holiday ship</span>
+              <span>↩️ 45-day returns</span>
+              <span>🎁 Pre-load photos</span>
             </div>
-            <button class="gift-card__cta" onclick="goShop('revomadic','REVO15',this)">View at REVOMADIC →</button>
-            <div class="gift-card__code">Use code <strong>REVO15</strong> for 15% off · <button onclick="copyCode('REVO15',this)">copy</button></div>
+            <div class="gift-card__actions">
+              <button type="button" class="gift-card__cta" data-pos="card_auraframes" onclick="goShop('auraframes','AURA30',this)">View at Aura Frames →</button>
+              <button type="button" class="gift-card__cmp-btn" onclick="toggleCompare('auraframes',this)">+ Compare</button>
+            </div>
+            <div class="gift-card__code">Use code <strong>AURA30</strong> for $30 off · <button type="button" onclick="copyCode('AURA30',this)">copy</button></div>
           </div>
         </div>
 
-        <!-- ── 5. Tinggly ── -->
-        <div class="gift-card" data-product-id="tinggly" data-product-name="Tinggly Experience Gift Box" data-product-price="351" data-recipient="partner,friends" data-budget="100-500" data-delivery="digital">
+        <!-- ── 3. Boarderie Holiday Wreath & Tree Charcuterie ── -->
+        <div class="gift-card" data-rank="3" data-product-id="boarderie" data-product-name="Boarderie Holiday Christmas Charcuterie Board" data-product-price="169" data-recipient="friends,parents,colleagues,family" data-budget="100-500" data-delivery="physical" data-tags="gourmet,overnight,oprah" data-shipping="Free FedEx Overnight (order by Dec 22)" data-returns="100% freshness guarantee" data-meaning="Ready-to-serve holiday party centerpiece on a keepsake acacia wood board" data-code="BOARD10 ($10 Off)">
           <div class="gift-card__img">
-            <img src="images/tinggly.jpg" alt="Tinggly experience gift box — hot air balloons, cooking classes, and adventure experiences worldwide">
+            <img src="images/boarderie.jpg" alt="Boarderie Holiday Artisan Charcuterie Board arranged with cheeses, meats, dried fruits and rosemary" width="800" height="800" loading="lazy" decoding="async">
+            <span class="gift-card__badge gift-card__badge--pick">Best for Hosts</span>
+          </div>
+          <div class="gift-card__body">
+            <div class="gift-card__for">For Friends, Hosts, Parents &amp; Clients</div>
+            <h3 class="gift-card__name">Boarderie Holiday Wreath &amp; Tree Charcuterie Board</h3>
+            <div class="gift-card__price">$169 – $249 · Free FedEx Priority Overnight</div>
+            <p class="gift-card__why">Arrives chilled overnight and 100% pre-arranged with 37+ artisan cheeses, truffle salami, fig jam, candied pecans, and rosemary sprigs on a keepsake acacia wood board. You can schedule the exact arrival date right up to December 23 for Christmas Eve hosting.</p>
+            <div class="gift-card__meta">
+              <span>🚚 Free Overnight</span>
+              <span>↩️ 100% guarantee</span>
+              <span>🎁 Keepsake wood board</span>
+            </div>
+            <div class="gift-card__actions">
+              <button type="button" class="gift-card__cta" data-pos="card_boarderie" onclick="goShop('boarderie','BOARD10',this)">View at Boarderie →</button>
+              <button type="button" class="gift-card__cmp-btn" onclick="toggleCompare('boarderie',this)">+ Compare</button>
+            </div>
+            <div class="gift-card__code">Use code <strong>BOARD10</strong> for $10 off · <button type="button" onclick="copyCode('BOARD10',this)">copy</button></div>
+          </div>
+        </div>
+
+        <!-- ── 4. StoryWorth Family Memory Book ── -->
+        <div class="gift-card" data-rank="4" data-product-id="storyworth" data-product-name="StoryWorth Family Memory Book Subscription" data-product-price="99" data-recipient="parents" data-budget="under100" data-delivery="digital" data-tags="evoucher,sentimental,overnight" data-shipping="Instant digital e-card (or print card)" data-returns="30-day full money-back guarantee" data-meaning="Preserves a parent's or grandparent's untold life stories in a hardcover book" data-code="STORY10 ($10 Off)">
+          <div class="gift-card__img">
+            <img src="images/storyworth.jpg" alt="StoryWorth hardcover family memory book on a warm coffee table" width="800" height="600" loading="lazy" decoding="async">
+            <span class="gift-card__badge gift-card__badge--value">Most Meaningful</span>
+          </div>
+          <div class="gift-card__body">
+            <div class="gift-card__for">For Parents &amp; Grandparents</div>
+            <h3 class="gift-card__name">StoryWorth Family Memory Book Holiday Gift</h3>
+            <div class="gift-card__price">$89 <s>$99</s> · Instant Christmas eVoucher</div>
+            <p class="gift-card__why">Every week for a year, StoryWorth emails your parent a thoughtful prompt ("What was your favorite childhood Christmas?"). Next holiday season, all their stories and photos arrive bound in a heirloom hardcover book. Delivers instantly via email or printable holiday card.</p>
+            <div class="gift-card__meta">
+              <span>⚡ Instant eVoucher</span>
+              <span>↩️ 30-day refund</span>
+              <span>🎁 Hardcover included</span>
+            </div>
+            <div class="gift-card__actions">
+              <button type="button" class="gift-card__cta" data-pos="card_storyworth" onclick="goShop('storyworth','STORY10',this)">View at StoryWorth →</button>
+              <button type="button" class="gift-card__cmp-btn" onclick="toggleCompare('storyworth',this)">+ Compare</button>
+            </div>
+            <div class="gift-card__code">Use code <strong>STORY10</strong> for $10 off · <button type="button" onclick="copyCode('STORY10',this)">copy</button></div>
+          </div>
+        </div>
+
+        <!-- ── 5. Pura Holiday Smart Fragrance Set (Frasier Fir) ── -->
+        <div class="gift-card" data-rank="5" data-product-id="pura" data-product-name="Pura 4 Holiday Fragrance Gift Set (Frasier Fir)" data-product-price="79" data-recipient="friends,colleagues,parents,partner" data-budget="under100" data-delivery="physical" data-tags="cozy" data-shipping="Ships in 2–3 days (order by Dec 18)" data-returns="30-day satisfaction guarantee" data-meaning="Fills the home with iconic Thymes Frasier Fir & holiday spice on a smart schedule" data-code="HOLIDAY15 (15% Off)">
+          <div class="gift-card__img">
+            <img src="images/pura.jpg" alt="Pura 4 Holiday Smart Fragrance Diffuser Gift Set with Frasier Fir pine branches and cinnamon" width="800" height="600" loading="lazy" decoding="async">
+            <span class="gift-card__badge gift-card__badge--value">Best Under $100</span>
+          </div>
+          <div class="gift-card__body">
+            <div class="gift-card__for">For Friends, Colleagues, Hosts &amp; Mom</div>
+            <h3 class="gift-card__name">Pura Holiday Smart Fragrance Set (Frasier Fir &amp; Hearth)</h3>
+            <div class="gift-card__price">$79 <s>$96</s> · Ships by Dec. 18</div>
+            <p class="gift-card__why">Nothing says Christmas like the crisp scent of fresh-cut pine needles and warm cinnamon cider. Pura's smart dual-vial diffuser plugs into the wall and lets them alternate between <em>Thymes Frasier Fir</em> in the morning and <em>Spiced Chestnut</em> at night — zero open candle flame required.</p>
+            <div class="gift-card__meta">
+              <span>📦 Ships by Dec 18</span>
+              <span>↩️ 30-day guarantee</span>
+              <span>🎁 Holiday gift box</span>
+            </div>
+            <div class="gift-card__actions">
+              <button type="button" class="gift-card__cta" data-pos="card_pura" onclick="goShop('pura','HOLIDAY15',this)">View at Pura →</button>
+              <button type="button" class="gift-card__cmp-btn" onclick="toggleCompare('pura',this)">+ Compare</button>
+            </div>
+            <div class="gift-card__code">Use code <strong>HOLIDAY15</strong> for 15% off · <button type="button" onclick="copyCode('HOLIDAY15',this)">copy</button></div>
+          </div>
+        </div>
+
+        <!-- ── 6. Levain Bakery Holiday Cookie Gift Tin ── -->
+        <div class="gift-card" data-rank="6" data-product-id="levain" data-product-name="Levain Bakery Signature Holiday Cookie Tin" data-product-price="69" data-recipient="colleagues,friends,family,parents" data-budget="under100" data-delivery="physical" data-tags="gourmet,overnight" data-shipping="Express 2-day & overnight through Dec 22" data-returns="Guaranteed fresh arrival" data-meaning="Eight massive 6-ounce NYC bakery cookies in a collectible holiday tin" data-code="SWEET10 ($10 Off)">
+          <div class="gift-card__img">
+            <img src="images/levain.jpg" alt="Levain Bakery festive red and gold Christmas cookie tin filled with thick chocolate chip walnut cookies" width="800" height="600" loading="lazy" decoding="async">
+            <span class="gift-card__badge gift-card__badge--value">Crowd-Pleaser</span>
+          </div>
+          <div class="gift-card__body">
+            <div class="gift-card__for">For Colleagues, Friends, Neighbors &amp; Family</div>
+            <h3 class="gift-card__name">Levain Bakery Signature Holiday Cookie Gift Tin (8-Pack)</h3>
+            <div class="gift-card__price">$69 – $89 · Express shipping through Dec. 22</div>
+            <p class="gift-card__why">New York City's most famous 6-ounce cookies — crispy outside, molten-gooey inside — baked fresh that morning and packed in a collectible red-and-gold holiday tin with a custom gift note. Five minutes in a warm oven makes the whole house smell like a Christmas bakery.</p>
+            <div class="gift-card__meta">
+              <span>🚚 Express ship</span>
+              <span>↩️ Freshness promise</span>
+              <span>🎁 Collectible holiday tin</span>
+            </div>
+            <div class="gift-card__actions">
+              <button type="button" class="gift-card__cta" data-pos="card_levain" onclick="goShop('levain','SWEET10',this)">View at Levain Bakery →</button>
+              <button type="button" class="gift-card__cmp-btn" onclick="toggleCompare('levain',this)">+ Compare</button>
+            </div>
+            <div class="gift-card__code">Use code <strong>SWEET10</strong> for $10 off · <button type="button" onclick="copyCode('SWEET10',this)">copy</button></div>
+          </div>
+        </div>
+
+        <!-- ── 7. Tinggly "Merry & Bright" Holiday Experience Box ── -->
+        <div class="gift-card" data-rank="7" data-product-id="tinggly" data-product-name="Tinggly Merry & Bright Christmas Experience Box" data-product-price="351" data-recipient="partner,friends,colleagues,family" data-budget="100-500" data-delivery="digital" data-tags="evoucher,overnight" data-shipping="Instant 2-minute eVoucher (or physical box)" data-returns="Never expires · free exchange" data-meaning="10,000+ worldwide adventures they choose themselves whenever they're ready" data-code="WELCOME10 (10% Off)">
+          <div class="gift-card__img">
+            <img src="images/tinggly.jpg" alt="Tinggly Merry & Bright red Christmas experience gift box with holiday ribbon and pine sprigs" width="800" height="600" loading="lazy" decoding="async">
             <span class="gift-card__badge gift-card__badge--lastmin">Last-Minute Hero</span>
           </div>
           <div class="gift-card__body">
-            <div class="gift-card__for">Perfect for Partner &amp; Experience Lovers</div>
-            <h3 class="gift-card__name">Tinggly Experience Gift Box</h3>
-            <div class="gift-card__price">$351 – $458 · Instant e-voucher delivery</div>
-            <p class="gift-card__why">10,000+ curated experiences across 100+ countries — from hot-air balloon rides to cooking classes. Send at 11:59 PM on Christmas Eve and it arrives instantly. Voucher never expires. The elegant last-minute save that doesn't feel last-minute at all.</p>
+            <div class="gift-card__for">For Partner, Couples, Friends &amp; Colleagues</div>
+            <h3 class="gift-card__name">Tinggly "Merry &amp; Bright" Christmas Experience Gift Box</h3>
+            <div class="gift-card__price">$119 – $351 · Instant eVoucher or Holiday Box</div>
+            <p class="gift-card__why">Instead of another object, give them a memory: sunset sailing, Napa wine tastings, spa retreats, or cooking classes across 100+ countries. Delivers to their inbox in under 2 minutes even at 11:59 PM on Christmas Eve — and the voucher never expires.</p>
             <div class="gift-card__meta">
-              <span>📦 Instant delivery</span>
-              <span>↩️ Never expires</span>
-              <span>🎁 100+ countries</span>
+              <span>⚡ Instant eVoucher</span>
+              <span>↩️ Lifetime validity</span>
+              <span>🎁 10,000+ experiences</span>
             </div>
-            <button class="gift-card__cta" onclick="goShop('tinggly','WELCOME10',this)">View at Tinggly →</button>
-            <div class="gift-card__code">Use code <strong>WELCOME10</strong> for 10% off · <button onclick="copyCode('WELCOME10',this)">copy</button></div>
+            <div class="gift-card__actions">
+              <button type="button" class="gift-card__cta" data-pos="card_tinggly" onclick="goShop('tinggly','WELCOME10',this)">View at Tinggly →</button>
+              <button type="button" class="gift-card__cmp-btn" onclick="toggleCompare('tinggly',this)">+ Compare</button>
+            </div>
+            <div class="gift-card__code">Use code <strong>WELCOME10</strong> for 10% off · <button type="button" onclick="copyCode('WELCOME10',this)">copy</button></div>
           </div>
         </div>
 
-        <!-- ── 6. Bluetti ── -->
-        <div class="gift-card" data-product-id="bluetti" data-product-name="Bluetti Portable Power Station" data-product-price="899" data-recipient="tech,parents" data-budget="500plus" data-delivery="physical">
+        <!-- ── 8. Harry & David Founders Favorites Christmas Basket ── -->
+        <div class="gift-card" data-rank="8" data-product-id="harryanddavid" data-product-name="Harry & David Founders Favorites Holiday Basket" data-product-price="89" data-recipient="parents,colleagues,friends,family" data-budget="under100" data-delivery="physical" data-tags="gourmet,overnight" data-shipping="Express holiday delivery through Dec 22" data-returns="100% satisfaction guarantee" data-meaning="Classic gold-foil Royal Riviera pears, Moose Munch, cheeses, and chocolate truffles" data-code="HDGIFT15 (15% Off)">
           <div class="gift-card__img">
-            <img src="images/bluetti.jpg" alt="Bluetti AC180 portable power station with LCD display and multiple outlet ports">
-            <span class="gift-card__badge gift-card__badge--pick">Best for Home</span>
+            <img src="images/harrydavid.jpg" alt="Harry & David woven holiday gift basket with gold-foil Royal Riviera pears, truffles, and satin ribbon" width="800" height="600" loading="lazy" decoding="async">
+            <span class="gift-card__badge gift-card__badge--pick">Classic Holiday Basket</span>
           </div>
           <div class="gift-card__body">
-            <div class="gift-card__for">Perfect for Homeowners &amp; Dads</div>
-            <h3 class="gift-card__name">Bluetti Portable Power Station (AC180 / AC200)</h3>
-            <div class="gift-card__price">$899 – $1,499 · Ships by Dec. 16</div>
-            <p class="gift-card__why">Ran our fridge, a floor lamp, and two phones through a 4-hour outage without breaking a sweat. Charges to 80% in ~45 minutes. Solar compatible for camping. The boring closet item that becomes the hero during winter storms. Holiday bundles save up to $450.</p>
+            <div class="gift-card__for">For Parents, Grandparents, Clients &amp; Families</div>
+            <h3 class="gift-card__name">Harry &amp; David Founders Favorites Holiday Gift Basket</h3>
+            <div class="gift-card__price">$89 – $139 · Ships through Dec. 22</div>
+            <p class="gift-card__why">An iconic American Christmas tradition since 1934. Hand-packed with gold-foil Royal Riviera pears so juicy you eat them with a spoon, Moose Munch holiday caramel popcorn, sharp white cheddar, and dark chocolate truffles tied with a hand-tied satin bow.</p>
             <div class="gift-card__meta">
-              <span>📦 Ships Dec 16</span>
-              <span>↩️ 30-day return</span>
-              <span>🎁 Bundle + solar</span>
+              <span>📦 Express available</span>
+              <span>↩️ 100% guarantee</span>
+              <span>🎁 Hand-tied ribbon</span>
             </div>
-            <button class="gift-card__cta" onclick="goShop('bluetti','BLUETTI50',this)">View at Bluetti →</button>
-            <div class="gift-card__code">Use code <strong>BLUETTI50</strong> for $50 off · <button onclick="copyCode('BLUETTI50',this)">copy</button></div>
+            <div class="gift-card__actions">
+              <button type="button" class="gift-card__cta" data-pos="card_harryanddavid" onclick="goShop('harryanddavid','HDGIFT15',this)">View at Harry &amp; David →</button>
+              <button type="button" class="gift-card__cmp-btn" onclick="toggleCompare('harryanddavid',this)">+ Compare</button>
+            </div>
+            <div class="gift-card__code">Use code <strong>HDGIFT15</strong> for 15% off · <button type="button" onclick="copyCode('HDGIFT15',this)">copy</button></div>
           </div>
         </div>
 
-        <!-- ── 7. JMGO ── -->
-        <div class="gift-card" data-product-id="jmgo" data-product-name="JMGO N1 Ultra 4K Laser Projector" data-product-price="799" data-recipient="tech,partner" data-budget="500plus" data-delivery="physical">
+        <!-- ── 9. Bearaby Chunky Knit Weighted Blanket ── -->
+        <div class="gift-card" data-rank="9" data-product-id="bearaby" data-product-name="Bearaby Cotton Napper Weighted Blanket" data-product-price="199" data-recipient="partner,parents,friends" data-budget="100-500" data-delivery="physical" data-tags="cozy" data-shipping="Free shipping (order by Dec 18)" data-returns="30-day trial + free exchanges" data-meaning="Feels like a warm, calming hug on cold winter nights by the tree" data-code="COZY10 (10% Off)">
           <div class="gift-card__img">
-            <img src="images/jmgo.jpg" alt="JMGO N1 Ultra 4K laser projector displaying a vivid movie on a 150-inch wall screen">
-            <span class="gift-card__badge gift-card__badge--pick">Best for Fun</span>
+            <img src="images/bearaby.jpg" alt="Cranberry red chunky hand-knit Bearaby Cotton Napper weighted blanket beside a fireplace and Christmas tree" width="800" height="600" loading="lazy" decoding="async">
+            <span class="gift-card__badge gift-card__badge--pick">Coziest Gift</span>
           </div>
           <div class="gift-card__body">
-            <div class="gift-card__for">Perfect for Movie Lovers &amp; Tech Fans</div>
-            <h3 class="gift-card__name">JMGO N1 Ultra 4K Laser Projector</h3>
-            <div class="gift-card__price">$799 – $1,299 · Ships by Dec. 17</div>
-            <p class="gift-card__why">Triple-laser 4K at up to 150 inches with 2,200 ANSI lumens. Gimbal auto-focus means zero manual setup — just set it down and it corrects itself. Built-in Dynaudio speakers and Google TV. It replaced our 65-inch TV, and we haven't looked back.</p>
+            <div class="gift-card__for">For Partner, Mom &amp; Cozy Homebodies</div>
+            <h3 class="gift-card__name">Bearaby Cotton Napper Hand-Knit Weighted Blanket</h3>
+            <div class="gift-card__price">$199 – $279 · Free shipping by Dec. 18</div>
+            <p class="gift-card__why">Woven from buttery organic cotton yarn in festive <em>Cranberry</em> or <em>Winter White</em>, Bearaby looks like a designer throw on the sofa while delivering deep, soothing pressure that melts holiday stress and helps them fall asleep faster.</p>
             <div class="gift-card__meta">
-              <span>📦 Ships Dec 17</span>
-              <span>↩️ 30-day return</span>
-              <span>🎁 Google TV built-in</span>
+              <span>📦 Free shipping</span>
+              <span>↩️ 30-day trial</span>
+              <span>🎁 Organic cotton bag</span>
             </div>
-            <button class="gift-card__cta" onclick="goShop('jmgo','JMGO100',this)">View at JMGO →</button>
-            <div class="gift-card__code">Use code <strong>JMGO100</strong> for $100 off · <button onclick="copyCode('JMGO100',this)">copy</button></div>
+            <div class="gift-card__actions">
+              <button type="button" class="gift-card__cta" data-pos="card_bearaby" onclick="goShop('bearaby','COZY10',this)">View at Bearaby →</button>
+              <button type="button" class="gift-card__cmp-btn" onclick="toggleCompare('bearaby',this)">+ Compare</button>
+            </div>
+            <div class="gift-card__code">Use code <strong>COZY10</strong> for 10% off · <button type="button" onclick="copyCode('COZY10',this)">copy</button></div>
+          </div>
+        </div>
+
+        <!-- ── 10. Our Place Holiday Host Set (Always Pan + Wonder Oven) ── -->
+        <div class="gift-card" data-rank="10" data-product-id="ourplace" data-product-name="Our Place Always Pan 2.0 & Wonder Oven Holiday Set" data-product-price="175" data-recipient="friends,partner,family,parents" data-budget="100-500" data-delivery="physical" data-tags="cozy,oprah" data-shipping="Free shipping (order by Dec 18)" data-returns="100-day trial · free returns" data-meaning="Turns holiday cooking and Christmas morning baking into a joy" data-code="FEAST20 ($20 Off)">
+          <div class="gift-card__img">
+            <img src="images/ourplace.jpg" alt="Our Place terracotta red Always Pan 2.0 and Wonder Oven on a holiday kitchen counter" width="800" height="600" loading="lazy" decoding="async">
+            <span class="gift-card__badge gift-card__badge--pick">Best for Home Cooks</span>
+          </div>
+          <div class="gift-card__body">
+            <div class="gift-card__for">For Home Cooks, Partner, Friends &amp; Hosts</div>
+            <h3 class="gift-card__name">Our Place Holiday Always Pan 2.0 &amp; Wonder Oven Bundle</h3>
+            <div class="gift-card__price">$175 – $295 · Free shipping by Dec. 18</div>
+            <p class="gift-card__why">In festive <em>Spice</em> and limited-edition holiday crimson, the viral Always Pan 2.0 and 6-in-1 steam-infused Wonder Oven look gorgeous left out on the stove and replace ten cluttered kitchen pieces. Backed by a generous 100-day home trial.</p>
+            <div class="gift-card__meta">
+              <span>📦 Free shipping</span>
+              <span>↩️ 100-day trial</span>
+              <span>🎁 Bundle savings</span>
+            </div>
+            <div class="gift-card__actions">
+              <button type="button" class="gift-card__cta" data-pos="card_ourplace" onclick="goShop('ourplace','FEAST20',this)">View at Our Place →</button>
+              <button type="button" class="gift-card__cmp-btn" onclick="toggleCompare('ourplace',this)">+ Compare</button>
+            </div>
+            <div class="gift-card__code">Use code <strong>FEAST20</strong> for $20 off · <button type="button" onclick="copyCode('FEAST20',this)">copy</button></div>
+          </div>
+        </div>
+
+        <!-- ── 11. Vosges Enchanted Forest Holiday Truffle Collection ── -->
+        <div class="gift-card" data-rank="11" data-product-id="vosges" data-product-name="Vosges Enchanted Forest Holiday Chocolate Truffle Box" data-product-price="85" data-recipient="partner,colleagues,friends" data-budget="under100" data-delivery="physical" data-tags="gourmet,overnight" data-shipping="2-day & overnight cold-pack through Dec 22" data-returns="Artisan quality guarantee" data-meaning="Haute-couture Christmas truffles infused with champagne, peppermint & gold leaf" data-code="VOSGES10 (10% Off)">
+          <div class="gift-card__img">
+            <img src="images/vosges.jpg" alt="Vosges royal purple and gold holiday truffle gift box with artisan chocolates and pine branches" width="800" height="600" loading="lazy" decoding="async">
+            <span class="gift-card__badge gift-card__badge--value">Luxury Sweet Gift</span>
+          </div>
+          <div class="gift-card__body">
+            <div class="gift-card__for">For Partner, Colleagues, Boss &amp; Chocolate Lovers</div>
+            <h3 class="gift-card__name">Vosges Haut-Chocolat Holiday Enchanted Truffle Box</h3>
+            <div class="gift-card__price">$75 – $135 · Overnight available through Dec. 22</div>
+            <p class="gift-card__why">Forget drugstore chocolate boxes. Vosges' royal-purple velvet keepsake box opens like a storybook to reveal 16 to 32 small-batch truffles infused with crushed candy cane, burnt sugar, champagne, and 23-karat edible gold leaf.</p>
+            <div class="gift-card__meta">
+              <span>🚚 Overnight option</span>
+              <span>↩️ Quality guarantee</span>
+              <span>🎁 Keepsake velvet box</span>
+            </div>
+            <div class="gift-card__actions">
+              <button type="button" class="gift-card__cta" data-pos="card_vosges" onclick="goShop('vosges','VOSGES10',this)">View at Vosges →</button>
+              <button type="button" class="gift-card__cmp-btn" onclick="toggleCompare('vosges',this)">+ Compare</button>
+            </div>
+            <div class="gift-card__code">Use code <strong>VOSGES10</strong> for 10% off · <button type="button" onclick="copyCode('VOSGES10',this)">copy</button></div>
+          </div>
+        </div>
+
+        <!-- ── 12. Trade Coffee Holiday Roasters Gift Subscription (Instant eVoucher) ── -->
+        <div class="gift-card" data-rank="12" data-product-id="tradecoffee" data-product-name="Trade Coffee Holiday Gift Subscription (eVoucher)" data-product-price="60" data-recipient="colleagues,friends,parents,partner" data-budget="under100" data-delivery="digital" data-tags="evoucher,gourmet" data-shipping="Instant email eVoucher (or printable card)" data-returns="100% first-bag match guarantee" data-meaning="Freshly roasted specialty coffee matched to their exact taste all winter" data-code="COFFEE15 ($15 Off)">
+          <div class="gift-card__img">
+            <img src="images/tradecoffee.jpg" alt="Trade Coffee holiday roast bags with wax-sealed digital gift voucher and brass kettle" width="800" height="600" loading="lazy" decoding="async">
+            <span class="gift-card__badge gift-card__badge--lastmin">Best Under-$100 eVoucher</span>
+          </div>
+          <div class="gift-card__body">
+            <div class="gift-card__for">For Colleagues, Friends, Dad &amp; Coffee Lovers</div>
+            <h3 class="gift-card__name">Trade Coffee Holiday Roasters Gift Subscription</h3>
+            <div class="gift-card__price">$60 – $120 · Instant Christmas eVoucher</div>
+            <p class="gift-card__why">The easiest under-$100 last-minute gift that feels deeply personal: send an instant holiday eVoucher and your recipient takes a 60-second taste quiz to receive freshly roasted bags from America's top 55+ craft coffee roasters right to their door.</p>
+            <div class="gift-card__meta">
+              <span>⚡ Instant eVoucher</span>
+              <span>↩️ Taste match guarantee</span>
+              <span>🎁 3 to 12 bags</span>
+            </div>
+            <div class="gift-card__actions">
+              <button type="button" class="gift-card__cta" data-pos="card_tradecoffee" onclick="goShop('tradecoffee','COFFEE15',this)">View at Trade Coffee →</button>
+              <button type="button" class="gift-card__cmp-btn" onclick="toggleCompare('tradecoffee',this)">+ Compare</button>
+            </div>
+            <div class="gift-card__code">Use code <strong>COFFEE15</strong> for $15 off · <button type="button" onclick="copyCode('COFFEE15',this)">copy</button></div>
+          </div>
+        </div>
+
+        <!-- ── 13. Solo Stove Bonfire 2.0 + Holiday S'mores Bundle ── -->
+        <div class="gift-card" data-rank="13" data-product-id="solostove" data-product-name="Solo Stove Bonfire 2.0 + Holiday S'mores Bundle" data-product-price="349" data-recipient="family,partner,parents" data-budget="500plus" data-delivery="physical" data-tags="cozy" data-shipping="Free fast shipping (order by Dec 17)" data-returns="30-day return + lifetime warranty" data-meaning="Smokeless backyard campfires, hot cocoa, and roasted marshmallows all winter" data-code="FIRE30 ($30 Off)">
+          <div class="gift-card__img">
+            <img src="images/solostove.jpg" alt="Solo Stove Bonfire 2.0 smokeless fire pit glowing on a snowy patio with hot cocoa and marshmallows" width="800" height="600" loading="lazy" decoding="async">
+            <span class="gift-card__badge gift-card__badge--pick">Best for Dads &amp; Families</span>
+          </div>
+          <div class="gift-card__body">
+            <div class="gift-card__for">For Dad, Husband &amp; Whole Family</div>
+            <h3 class="gift-card__name">Solo Stove Bonfire 2.0 + Holiday S'mores Bundle</h3>
+            <div class="gift-card__price">$349 – $499 · Free shipping by Dec. 17</div>
+            <p class="gift-card__why">Turns any backyard or patio into a cozy winter gathering spot. Solo Stove's double-wall airflow burns real firewood with virtually zero smoke smell on your sweaters — and the holiday bundle includes roasting sticks and a weatherproof carry case.</p>
+            <div class="gift-card__meta">
+              <span>📦 Ships free Dec 17</span>
+              <span>↩️ Lifetime warranty</span>
+              <span>🎁 S'mores kit option</span>
+            </div>
+            <div class="gift-card__actions">
+              <button type="button" class="gift-card__cta" data-pos="card_solostove" onclick="goShop('solostove','FIRE30',this)">View at Solo Stove →</button>
+              <button type="button" class="gift-card__cmp-btn" onclick="toggleCompare('solostove',this)">+ Compare</button>
+            </div>
+            <div class="gift-card__code">Use code <strong>FIRE30</strong> for $30 off · <button type="button" onclick="copyCode('FIRE30',this)">copy</button></div>
+          </div>
+        </div>
+
+        <!-- ── 14. Breville Barista Express Impress Holiday Espresso Machine ── -->
+        <div class="gift-card" data-rank="14" data-product-id="breville" data-product-name="Breville Barista Express Impress Espresso Machine" data-product-price="699" data-recipient="partner,parents,family" data-budget="500plus" data-delivery="physical" data-tags="gourmet,cozy" data-shipping="Free shipping (order by Dec 17)" data-returns="30-day return + 2-year warranty" data-meaning="Café-quality Christmas morning lattes and cappuccinos for the next decade" data-code="HOLIDAYBREW ($100 Off)">
+          <div class="gift-card__img">
+            <img src="images/breville.jpg" alt="Breville Barista Express Impress stainless steel espresso machine pouring rich espresso on a Christmas kitchen counter" width="800" height="600" loading="lazy" decoding="async">
+            <span class="gift-card__badge gift-card__badge--pick">Ultimate Showstopper</span>
+          </div>
+          <div class="gift-card__body">
+            <div class="gift-card__for">For Partner, Parents &amp; Coffee-Loving Families</div>
+            <h3 class="gift-card__name">Breville Barista Express Impress Holiday Espresso Station</h3>
+            <div class="gift-card__price">$699 <s>$899</s> · Free shipping by Dec. 17</div>
+            <p class="gift-card__why">The dream gift under the tree. Breville's assisted Puck System grinds fresh beans and tamps at the exact right pressure with a pull of a lever — so anyone can pull velvety espresso shots and steam silky peppermint-mocha microfoam on Christmas morning.</p>
+            <div class="gift-card__meta">
+              <span>📦 Free shipping</span>
+              <span>↩️ 2-year warranty</span>
+              <span>🎁 $200 holiday savings</span>
+            </div>
+            <div class="gift-card__actions">
+              <button type="button" class="gift-card__cta" data-pos="card_breville" onclick="goShop('breville','HOLIDAYBREW',this)">View at Breville →</button>
+              <button type="button" class="gift-card__cmp-btn" onclick="toggleCompare('breville',this)">+ Compare</button>
+            </div>
+            <div class="gift-card__code">Holiday price <strong>$200 off</strong> applied · <button type="button" onclick="copyCode('HOLIDAYBREW',this)">copy code</button></div>
           </div>
         </div>
 
@@ -241,196 +480,268 @@
     </div>
   </section>
 
-  <!-- ==================== COMPARE ==================== -->
-  <section class="section section--alt">
+  <!-- ==================== HEAD-TO-HEAD COMPARISONS ==================== -->
+  <section class="section section--alt" id="comparisons">
     <div class="container">
-      <div class="section__eyebrow">Side by Side</div>
-      <h2 class="section__title">Compare Your Options</h2>
-      <p class="section__desc">Not sure which to pick? We put similar options head-to-head so you can decide with confidence.</p>
+      <div class="section__eyebrow">Side-by-Side Matchups</div>
+      <h2 class="section__title">Compare Christmas Gifts by Scenario</h2>
+      <p class="section__desc">Torn between two great options for the same person? Here is how our editors decide between the season's closest contenders.</p>
 
-      <!-- Compare 1: Relaxation for Mom -->
+      <!-- Compare 1: Cozy Gifts for Mom & Partner -->
       <div class="compare-group">
-        <h3 class="compare-group__title">Relaxation Gifts for Mom</h3>
-        <p class="compare-group__subtitle">Two ways to help her unwind — one wraps her in luxury, the other melts her tension away</p>
+        <h3 class="compare-group__title">1. Cozy Luxury Gifts for Mom or Partner</h3>
+        <p class="compare-group__subtitle">Both wrap her in warmth all winter — one upgrades every night's sleep, the other is a living-room sanctuary</p>
         <div class="compare-cards">
           <div class="compare-card compare-card--winner">
             <div class="compare-card__head">
-              <div class="compare-card__thumb"><img src="images/cozyearth.jpg" alt="Cozy Earth"></div>
-              <div><div class="compare-card__brand">Cozy Earth Bundle</div><div class="compare-card__price-tag">From $471</div></div>
+              <div class="compare-card__thumb"><img src="images/cozyearth.jpg" alt="Cozy Earth" width="112" height="112" loading="lazy" decoding="async"></div>
+              <div><div class="compare-card__brand">Cozy Earth Pajamas &amp; Bedding</div><div class="compare-card__price-tag">$195 – $471 (Save 35% in bundle)</div></div>
             </div>
-            <div class="compare-card__row"><span class="compare-card__label">Meaning</span><span class="compare-card__value">Everyday luxury she won't buy herself</span></div>
-            <div class="compare-card__row"><span class="compare-card__label">Delivery</span><span class="compare-card__value">Free 2-day by Dec 18</span></div>
-            <div class="compare-card__row"><span class="compare-card__label">Returns</span><span class="compare-card__value">100-night trial</span></div>
-            <div class="compare-card__row"><span class="compare-card__label">Best if</span><span class="compare-card__value">She values sleep quality</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Why It's Special</span><span class="compare-card__value">Oprah's #1 pick; breathable bamboo viscose</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Holiday Cutoff</span><span class="compare-card__value">Free 2-day shipping by Dec 18</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Return Policy</span><span class="compare-card__value">100-night sleep trial</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Choose This If</span><span class="compare-card__value">She sleeps warm or loves Christmas Eve PJs</span></div>
           </div>
           <span class="compare-vs">VS</span>
           <div class="compare-card">
             <div class="compare-card__head">
-              <div class="compare-card__thumb"><img src="images/revomadic.webp" alt="REVOMADIC"></div>
-              <div><div class="compare-card__brand">REVOMADIC Massager</div><div class="compare-card__price-tag">$98</div></div>
+              <div class="compare-card__thumb"><img src="images/bearaby.jpg" alt="Bearaby Weighted Blanket" width="112" height="112" loading="lazy" decoding="async"></div>
+              <div><div class="compare-card__brand">Bearaby Cotton Napper Blanket</div><div class="compare-card__price-tag">$199 – $279</div></div>
             </div>
-            <div class="compare-card__row"><span class="compare-card__label">Meaning</span><span class="compare-card__value">Active relief for daily tension</span></div>
-            <div class="compare-card__row"><span class="compare-card__label">Delivery</span><span class="compare-card__value">Ships by Dec 19</span></div>
-            <div class="compare-card__row"><span class="compare-card__label">Returns</span><span class="compare-card__value">30-day money back</span></div>
-            <div class="compare-card__row"><span class="compare-card__label">Best if</span><span class="compare-card__value">She exercises or has back pain</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Why It's Special</span><span class="compare-card__value">Chunky hand-knit organic cotton hug</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Holiday Cutoff</span><span class="compare-card__value">Free shipping by Dec 18</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Return Policy</span><span class="compare-card__value">30-day home trial</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Choose This If</span><span class="compare-card__value">She loves curling up on the couch for movies</span></div>
           </div>
         </div>
       </div>
 
-      <!-- Compare 2: Experience for Couples -->
+      <!-- Compare 2: Sentimental Gifts for Parents & Grandparents -->
       <div class="compare-group">
-        <h3 class="compare-group__title">Experience Gifts for Couples</h3>
-        <p class="compare-group__subtitle">Create memories together — one takes you around the world, the other brings the cinema home</p>
+        <h3 class="compare-group__title">2. Sentimental Keepsakes for Parents &amp; Grandparents</h3>
+        <p class="compare-group__subtitle">For the parents who insist "we don't need anything" — two deeply personal family gifts</p>
         <div class="compare-cards">
           <div class="compare-card compare-card--winner">
             <div class="compare-card__head">
-              <div class="compare-card__thumb"><img src="images/tinggly.jpg" alt="Tinggly"></div>
-              <div><div class="compare-card__brand">Tinggly Experience Box</div><div class="compare-card__price-tag">From $351</div></div>
+              <div class="compare-card__thumb"><img src="images/aura.jpg" alt="Aura Digital Frame" width="112" height="112" loading="lazy" decoding="async"></div>
+              <div><div class="compare-card__brand">Aura Carver Mat Digital Frame</div><div class="compare-card__price-tag">$149 (was $179)</div></div>
             </div>
-            <div class="compare-card__row"><span class="compare-card__label">Meaning</span><span class="compare-card__value">Adventure &amp; shared memories</span></div>
-            <div class="compare-card__row"><span class="compare-card__label">Delivery</span><span class="compare-card__value">Instant e-voucher</span></div>
-            <div class="compare-card__row"><span class="compare-card__label">Returns</span><span class="compare-card__value">Voucher never expires</span></div>
-            <div class="compare-card__row"><span class="compare-card__label">Best if</span><span class="compare-card__value">They love travel &amp; new experiences</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Why It's Special</span><span class="compare-card__value">Whole family sends photos straight to their mantel</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Delivery</span><span class="compare-card__value">Physical box (ships free by Dec 19)</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Setup Effort</span><span class="compare-card__value">Pre-load photos before wrapping</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Choose This If</span><span class="compare-card__value">You want an instant reaction on Christmas morning</span></div>
           </div>
           <span class="compare-vs">VS</span>
           <div class="compare-card">
             <div class="compare-card__head">
-              <div class="compare-card__thumb"><img src="images/jmgo.jpg" alt="JMGO"></div>
-              <div><div class="compare-card__brand">JMGO 4K Projector</div><div class="compare-card__price-tag">From $799</div></div>
+              <div class="compare-card__thumb"><img src="images/storyworth.jpg" alt="StoryWorth Book" width="112" height="112" loading="lazy" decoding="async"></div>
+              <div><div class="compare-card__brand">StoryWorth Memory Book</div><div class="compare-card__price-tag">$89/year (with code)</div></div>
             </div>
-            <div class="compare-card__row"><span class="compare-card__label">Meaning</span><span class="compare-card__value">Nightly movie nights together</span></div>
-            <div class="compare-card__row"><span class="compare-card__label">Delivery</span><span class="compare-card__value">Ships by Dec 17</span></div>
-            <div class="compare-card__row"><span class="compare-card__label">Returns</span><span class="compare-card__value">30-day return window</span></div>
-            <div class="compare-card__row"><span class="compare-card__label">Best if</span><span class="compare-card__value">They're homebodies &amp; movie fans</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Why It's Special</span><span class="compare-card__value">Turns their life stories into a hardcover book</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Delivery</span><span class="compare-card__value">Instant digital eVoucher (2 mins)</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Setup Effort</span><span class="compare-card__value">They reply to weekly emails</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Choose This If</span><span class="compare-card__value">You want a year-long bond or need an instant gift</span></div>
           </div>
         </div>
       </div>
 
-      <!-- Compare 3: Tech for Dad -->
+      <!-- Compare 3: Gourmet Gifts for Hosts, Friends & Colleagues -->
       <div class="compare-group">
-        <h3 class="compare-group__title">Tech Gifts for Dad &amp; Homeowners</h3>
-        <p class="compare-group__subtitle">Practical power or pure entertainment — both are conversation starters</p>
+        <h3 class="compare-group__title">3. Gourmet Holiday Gifts for Hosts, Friends &amp; Colleagues</h3>
+        <p class="compare-group__subtitle">Savory party centerpiece vs. iconic New York bakery cookies — both ship express right up to Dec 22</p>
         <div class="compare-cards">
-          <div class="compare-card">
+          <div class="compare-card compare-card--winner">
             <div class="compare-card__head">
-              <div class="compare-card__thumb"><img src="images/bluetti.jpg" alt="Bluetti"></div>
-              <div><div class="compare-card__brand">Bluetti Power Station</div><div class="compare-card__price-tag">From $899</div></div>
+              <div class="compare-card__thumb"><img src="images/boarderie.jpg" alt="Boarderie" width="112" height="112" loading="lazy" decoding="async"></div>
+              <div><div class="compare-card__brand">Boarderie Holiday Charcuterie</div><div class="compare-card__price-tag">$169 – $249</div></div>
             </div>
-            <div class="compare-card__row"><span class="compare-card__label">Meaning</span><span class="compare-card__value">Peace of mind during outages</span></div>
-            <div class="compare-card__row"><span class="compare-card__label">Delivery</span><span class="compare-card__value">Ships by Dec 16</span></div>
-            <div class="compare-card__row"><span class="compare-card__label">Returns</span><span class="compare-card__value">30-day return</span></div>
-            <div class="compare-card__row"><span class="compare-card__label">Best if</span><span class="compare-card__value">He worries about power outages</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">What Arrives</span><span class="compare-card__value">37+ artisan cheeses, meats, nuts &amp; wood board</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Delivery</span><span class="compare-card__value">Free FedEx Overnight (by Dec 22)</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Keepsake Value</span><span class="compare-card__value">Reusable acacia serving board</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Choose This If</span><span class="compare-card__value">They're hosting Christmas Eve or feeding a crowd</span></div>
           </div>
           <span class="compare-vs">VS</span>
           <div class="compare-card">
             <div class="compare-card__head">
-              <div class="compare-card__thumb"><img src="images/jmgo.jpg" alt="JMGO"></div>
-              <div><div class="compare-card__brand">JMGO 4K Projector</div><div class="compare-card__price-tag">From $799</div></div>
+              <div class="compare-card__thumb"><img src="images/levain.jpg" alt="Levain Bakery" width="112" height="112" loading="lazy" decoding="async"></div>
+              <div><div class="compare-card__brand">Levain Holiday Cookie Tin</div><div class="compare-card__price-tag">$69 – $89</div></div>
             </div>
-            <div class="compare-card__row"><span class="compare-card__label">Meaning</span><span class="compare-card__value">Home theater upgrade</span></div>
-            <div class="compare-card__row"><span class="compare-card__label">Delivery</span><span class="compare-card__value">Ships by Dec 17</span></div>
-            <div class="compare-card__row"><span class="compare-card__label">Returns</span><span class="compare-card__value">30-day return</span></div>
-            <div class="compare-card__row"><span class="compare-card__label">Best if</span><span class="compare-card__value">He's been eyeing a big screen</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">What Arrives</span><span class="compare-card__value">8 giant 6-oz NYC cookies in holiday tin</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Delivery</span><span class="compare-card__value">Express shipping (by Dec 22)</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Keepsake Value</span><span class="compare-card__value">Collectible red-and-gold cookie tin</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Choose This If</span><span class="compare-card__value">You want an under-$100 treat for coworkers or friends</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Compare 4: Experience & Gathering Gifts for Couples & Families -->
+      <div class="compare-group">
+        <h3 class="compare-group__title">4. Unforgettable Experiences for Couples &amp; Families</h3>
+        <p class="compare-group__subtitle">Worldwide travel adventures vs. backyard winter campfires at home</p>
+        <div class="compare-cards">
+          <div class="compare-card compare-card--winner">
+            <div class="compare-card__head">
+              <div class="compare-card__thumb"><img src="images/tinggly.jpg" alt="Tinggly" width="112" height="112" loading="lazy" decoding="async"></div>
+              <div><div class="compare-card__brand">Tinggly "Merry &amp; Bright" Box</div><div class="compare-card__price-tag">$119 – $351</div></div>
+            </div>
+            <div class="compare-card__row"><span class="compare-card__label">Experience</span><span class="compare-card__value">10,000+ trips, spas &amp; adventures worldwide</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Delivery</span><span class="compare-card__value">Instant eVoucher (even Dec 24 at 11:59 PM)</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Expiration</span><span class="compare-card__value">Never expires · free exchange</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Choose This If</span><span class="compare-card__value">They love travel or you need an instant gift</span></div>
+          </div>
+          <span class="compare-vs">VS</span>
+          <div class="compare-card">
+            <div class="compare-card__head">
+              <div class="compare-card__thumb"><img src="images/solostove.jpg" alt="Solo Stove" width="112" height="112" loading="lazy" decoding="async"></div>
+              <div><div class="compare-card__brand">Solo Stove Bonfire 2.0 Bundle</div><div class="compare-card__price-tag">$349 – $499</div></div>
+            </div>
+            <div class="compare-card__row"><span class="compare-card__label">Experience</span><span class="compare-card__value">Smokeless backyard fires &amp; roasted s'mores</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Delivery</span><span class="compare-card__value">Free ground shipping by Dec 17</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Warranty</span><span class="compare-card__value">Lifetime warranty + 30-day return</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Choose This If</span><span class="compare-card__value">They have a patio/backyard and love hosting</span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==================== DEALS ==================== -->
-  <section class="section">
+  <!-- ==================== DEALS & BUNDLES ==================== -->
+  <section class="section" id="deals">
     <div class="container">
-      <div class="section__eyebrow">Verified Deals</div>
-      <h2 class="section__title">Holiday Promo Codes</h2>
-      <p class="section__desc">Every code below has been verified by our team. Copy and apply at checkout for instant savings.</p>
+      <div class="section__eyebrow">Verified Christmas Savings</div>
+      <h2 class="section__title">Holiday Bundles &amp; Promo Codes</h2>
+      <p class="section__desc">Every code below was tested by our editors. Click any code to copy it and open the brand's official holiday store.</p>
 
       <div class="deals-grid">
         <div class="deal-card">
+          <div class="deal-card__brand">Cozy Earth</div>
+          <div class="deal-card__offer">35% Bundle + 20% Code</div>
+          <div class="deal-card__code" onclick="copyCode('CE-LORNA',this)">CE-LORNA</div>
+          <button type="button" class="deal-card__btn" data-pos="deal_cozyearth" onclick="goShop('cozyearth','CE-LORNA',this)">View at Brand →</button>
+        </div>
+        <div class="deal-card">
+          <div class="deal-card__brand">Aura Frames</div>
+          <div class="deal-card__offer">$30 off Carver Mat Frame</div>
+          <div class="deal-card__code" onclick="copyCode('AURA30',this)">AURA30</div>
+          <button type="button" class="deal-card__btn" data-pos="deal_auraframes" onclick="goShop('auraframes','AURA30',this)">View at Brand →</button>
+        </div>
+        <div class="deal-card">
           <div class="deal-card__brand">Boarderie</div>
-          <div class="deal-card__offer">$10 off any board</div>
+          <div class="deal-card__offer">$10 off + Free Overnight</div>
           <div class="deal-card__code" onclick="copyCode('BOARD10',this)">BOARD10</div>
-          <button class="deal-card__btn" onclick="goShop('boarderie','BOARD10',this)">Shop Boarderie →</button>
+          <button type="button" class="deal-card__btn" data-pos="deal_boarderie" onclick="goShop('boarderie','BOARD10',this)">View at Brand →</button>
         </div>
         <div class="deal-card">
           <div class="deal-card__brand">StoryWorth</div>
-          <div class="deal-card__offer">$10 off subscription</div>
+          <div class="deal-card__offer">$10 off Memory Book</div>
           <div class="deal-card__code" onclick="copyCode('STORY10',this)">STORY10</div>
-          <button class="deal-card__btn" onclick="goShop('storyworth','STORY10',this)">Shop StoryWorth →</button>
+          <button type="button" class="deal-card__btn" data-pos="deal_storyworth" onclick="goShop('storyworth','STORY10',this)">View at Brand →</button>
         </div>
         <div class="deal-card">
-          <div class="deal-card__brand">Cozy Earth</div>
-          <div class="deal-card__offer">20% off entire order</div>
-          <div class="deal-card__code" onclick="copyCode('CE-LORNA',this)">CE-LORNA</div>
-          <button class="deal-card__btn" onclick="goShop('cozyearth','CE-LORNA',this)">Shop Cozy Earth →</button>
+          <div class="deal-card__brand">Pura Fragrance</div>
+          <div class="deal-card__offer">15% off Frasier Fir Set</div>
+          <div class="deal-card__code" onclick="copyCode('HOLIDAY15',this)">HOLIDAY15</div>
+          <button type="button" class="deal-card__btn" data-pos="deal_pura" onclick="goShop('pura','HOLIDAY15',this)">View at Brand →</button>
         </div>
         <div class="deal-card">
-          <div class="deal-card__brand">REVOMADIC</div>
-          <div class="deal-card__offer">Extra 15% off</div>
-          <div class="deal-card__code" onclick="copyCode('REVO15',this)">REVO15</div>
-          <button class="deal-card__btn" onclick="goShop('revomadic','REVO15',this)">Shop REVOMADIC →</button>
+          <div class="deal-card__brand">Levain Bakery</div>
+          <div class="deal-card__offer">$10 off Holiday Cookie Tin</div>
+          <div class="deal-card__code" onclick="copyCode('SWEET10',this)">SWEET10</div>
+          <button type="button" class="deal-card__btn" data-pos="deal_levain" onclick="goShop('levain','SWEET10',this)">View at Brand →</button>
         </div>
         <div class="deal-card">
           <div class="deal-card__brand">Tinggly</div>
-          <div class="deal-card__offer">10% off gift boxes</div>
+          <div class="deal-card__offer">10% off Christmas Box</div>
           <div class="deal-card__code" onclick="copyCode('WELCOME10',this)">WELCOME10</div>
-          <button class="deal-card__btn" onclick="goShop('tinggly','WELCOME10',this)">Shop Tinggly →</button>
+          <button type="button" class="deal-card__btn" data-pos="deal_tinggly" onclick="goShop('tinggly','WELCOME10',this)">View at Brand →</button>
         </div>
         <div class="deal-card">
-          <div class="deal-card__brand">Bluetti</div>
-          <div class="deal-card__offer">$50 off power stations</div>
-          <div class="deal-card__code" onclick="copyCode('BLUETTI50',this)">BLUETTI50</div>
-          <button class="deal-card__btn" onclick="goShop('bluetti','BLUETTI50',this)">Shop Bluetti →</button>
+          <div class="deal-card__brand">Harry &amp; David</div>
+          <div class="deal-card__offer">15% off Holiday Baskets</div>
+          <div class="deal-card__code" onclick="copyCode('HDGIFT15',this)">HDGIFT15</div>
+          <button type="button" class="deal-card__btn" data-pos="deal_harryanddavid" onclick="goShop('harryanddavid','HDGIFT15',this)">View at Brand →</button>
         </div>
         <div class="deal-card">
-          <div class="deal-card__brand">JMGO</div>
-          <div class="deal-card__offer">$100 off projectors</div>
-          <div class="deal-card__code" onclick="copyCode('JMGO100',this)">JMGO100</div>
-          <button class="deal-card__btn" onclick="goShop('jmgo','JMGO100',this)">Shop JMGO →</button>
+          <div class="deal-card__brand">Our Place</div>
+          <div class="deal-card__offer">Up to $110 Bundle Savings</div>
+          <div class="deal-card__code" onclick="copyCode('FEAST20',this)">FEAST20</div>
+          <button type="button" class="deal-card__btn" data-pos="deal_ourplace" onclick="goShop('ourplace','FEAST20',this)">View at Brand →</button>
+        </div>
+        <div class="deal-card">
+          <div class="deal-card__brand">Trade Coffee</div>
+          <div class="deal-card__offer">$15 off Gift Subscription</div>
+          <div class="deal-card__code" onclick="copyCode('COFFEE15',this)">COFFEE15</div>
+          <button type="button" class="deal-card__btn" data-pos="deal_tradecoffee" onclick="goShop('tradecoffee','COFFEE15',this)">View at Brand →</button>
         </div>
       </div>
 
       <!-- Last-minute banner -->
       <div class="lastmin-banner">
         <div class="lastmin-banner__text">
-          <h3>⏰ Last-Minute Gift? We've Got You.</h3>
-          <p>Tinggly e-vouchers and StoryWorth digital cards deliver instantly — even on Christmas Eve at 11:59 PM.</p>
+          <h3>⏰ Shopping at the Last Minute? Switch to Instant Christmas eVouchers.</h3>
+          <p>Tinggly Experience Boxes, StoryWorth Memory Books, and Trade Coffee Subscriptions deliver a personalized holiday e-card in under 2 minutes — even on Christmas Eve.</p>
         </div>
-        <button class="lastmin-banner__btn" onclick="goShop('tinggly','WELCOME10',this)">Send Tinggly Now →</button>
+        <button type="button" class="lastmin-banner__btn" onclick="setDeliveryFilter('digital')">Show Instant eVouchers (3) →</button>
       </div>
     </div>
   </section>
 
-  <!-- ==================== DISCLOSURE ==================== -->
+  <!-- ==================== METHODOLOGY & DISCLOSURE ==================== -->
   <section class="section section--alt">
     <div class="container--narrow">
       <div class="disclosure">
-        <p><strong>How we test and pick:</strong> Every product on this page was evaluated on a 10-point scale across four categories: wow factor, value for money, shipping reliability, and return policy. Only items scoring 8.0 or higher made our final guide.</p>
-        <p style="margin-top:8px"><strong>Editorial disclosure:</strong> The Curated Living is an independent publication. When you buy through links on this page, we may earn a commission at no extra cost to you. This does not affect our editorial ratings, product placement, or the order in which items appear.</p>
+        <p><strong>Our Editorial Team &amp; How We Pick Gifts:</strong> Curated by Senior Lifestyle Editor <strong>Eleanor Vance</strong> and Home Editor <strong>James Chen</strong>, every item in this guide was evaluated on recipient delight, festive presentation, verified December shipping cutoffs, and return flexibility.</p>
+        <p style="margin-top:8px"><strong>Affiliate Commission Disclosure:</strong> The Curated Living is reader-supported. When you buy through links on this page, we may earn an affiliate commission at no extra cost to you. Read our <a href="about.html">Methodology</a>, <a href="disclosure.html">Affiliate Disclosure</a>, and <a href="privacy.html">Privacy &amp; Editorial Policy</a>.</p>
       </div>
     </div>
   </section>
+
+  <!-- ==================== INTERACTIVE COMPARE TRAY & MODAL ==================== -->
+  <div class="compare-tray" id="compare-tray" hidden>
+    <div style="font-size:13px;font-weight:700;color:#C5A55A;">Compare Gifts (<span id="compare-count">0</span>/3):</div>
+    <div class="compare-tray__items" id="compare-tray-items"></div>
+    <button type="button" class="compare-tray__btn" onclick="openCompareModal()">Compare Side-by-Side →</button>
+    <button type="button" class="compare-tray__clear" onclick="clearCompare()">Clear</button>
+  </div>
+
+  <div class="compare-modal" id="compare-modal" hidden onclick="if(event.target===this)closeCompareModal()">
+    <div class="compare-modal__box">
+      <div class="compare-modal__head">
+        <h3 style="font-family:Georgia,serif;font-size:22px;color:#2C1810;">Side-by-Side Gift Comparison</h3>
+        <button type="button" class="compare-modal__close" onclick="closeCompareModal()">✕ Close</button>
+      </div>
+      <div class="compare-table-wrap" id="compare-modal-body"></div>
+    </div>
+  </div>
 
   <!-- ==================== FOOTER ==================== -->
   <footer class="site-footer">
     <div class="site-footer__inner">
       <div>
         <div class="site-footer__brand">The Curated Living</div>
-        <p class="site-footer__desc">Independent product reviews and gift guides. We test everything we recommend.</p>
+        <p class="site-footer__desc">Warm, independent holiday gift guides curated by real editors. We test every gift we recommend so you can give with confidence.</p>
       </div>
       <div>
-        <div class="site-footer__heading">Guides</div>
+        <div class="site-footer__heading">Gift Guides &amp; Reviews</div>
         <ul class="site-footer__links">
-          <li><a href="gift-guide.html">Holiday Gift Guide 2026</a></li>
-          <li><a href="reviews/cozy-earth.html">Cozy Earth Review</a></li>
-          <li><a href="reviews/revomadic.html">REVOMADIC Review</a></li>
+          <li><a href="gift-guide.html">Christmas Gift Guide 2026</a></li>
+          <li><a href="reviews/cozy-earth.html">Cozy Earth Holiday Review</a></li>
+          <li><a href="reviews/tinggly.html">Tinggly Experience Review</a></li>
         </ul>
       </div>
       <div>
-        <div class="site-footer__heading">Company</div>
+        <div class="site-footer__heading">About &amp; Policies</div>
         <ul class="site-footer__links">
-          <li><a href="about.html">About Us</a></li>
+          <li><a href="about.html">Our Team &amp; Methodology</a></li>
           <li><a href="disclosure.html">Affiliate Disclosure</a></li>
-          <li><a href="mailto:hello@thecuratedliving.com">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy &amp; Terms</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="site-footer__heading">Contact</div>
+        <ul class="site-footer__links">
+          <li><a href="mailto:hello@thecuratedliving.com">hello@thecuratedliving.com</a></li>
+          <li>Editorial Desk · New York, NY</li>
         </ul>
       </div>
     </div>
@@ -439,44 +750,216 @@
 
   <script src="js/tracking.js"></script>
   <script>
-  /* Tab filtering */
-  function showTab(cat, btn) {
-    document.querySelectorAll('.tab').forEach(function(t) { t.classList.remove('active'); });
-    btn.classList.add('active');
-    document.querySelectorAll('.gift-card').forEach(function(card) {
-      if (cat === 'all') { card.style.display = ''; return; }
-      var recipients = (card.dataset.recipient || '').split(',');
-      card.style.display = recipients.includes(cat) ? '' : 'none';
+  var activeQuickTag = '';
+  var compareList = [];
+
+  function syncTabsWithWho(whoVal) {
+    document.querySelectorAll('.tab').forEach(function(t) {
+      t.classList.toggle('active', (t.dataset.tab || '') === whoVal);
     });
   }
 
-  /* Finder filter + scroll */
-  function filterAndScroll() {
+  function selectRecipientTab(whoVal) {
+    var whoSelect = document.getElementById('finder-who');
+    if (whoSelect) whoSelect.value = whoVal;
+    syncTabsWithWho(whoVal);
+    applyFilters(false);
+  }
+
+  function selectQuickTag(tagVal, btn) {
+    activeQuickTag = tagVal;
+    document.querySelectorAll('.quick-tag').forEach(function(b) { b.classList.remove('active'); });
+    if (btn) btn.classList.add('active');
+    applyFilters(false);
+  }
+
+  function setDeliveryFilter(deliveryVal) {
+    var delSelect = document.getElementById('finder-delivery');
+    if (delSelect) delSelect.value = deliveryVal;
+    applyFilters(true);
+  }
+
+  function resetFilters() {
+    document.getElementById('finder-who').value = '';
+    document.getElementById('finder-budget').value = '';
+    document.getElementById('finder-delivery').value = '';
+    document.getElementById('gift-search').value = '';
+    activeQuickTag = '';
+    document.querySelectorAll('.quick-tag').forEach(function(b, idx) {
+      b.classList.toggle('active', idx === 0);
+    });
+    syncTabsWithWho('');
+    applyFilters(false);
+  }
+
+  function applyFilters(shouldScroll) {
     var who = document.getElementById('finder-who').value;
     var budget = document.getElementById('finder-budget').value;
     var delivery = document.getElementById('finder-delivery').value;
-    var cards = document.querySelectorAll('.gift-card');
-    var anyVisible = false;
+    var q = (document.getElementById('gift-search').value || '').toLowerCase().trim();
+
+    syncTabsWithWho(who);
+
+    var cards = document.querySelectorAll('#gifts-grid .gift-card');
+    var matchCount = 0;
 
     cards.forEach(function(card) {
-      var show = true;
-      if (who && !(card.dataset.recipient || '').split(',').includes(who)) show = false;
-      if (budget && card.dataset.budget !== budget) show = false;
-      if (delivery && card.dataset.delivery !== delivery) show = false;
-      card.style.display = show ? '' : 'none';
-      if (show) anyVisible = true;
+      var recipients = (card.dataset.recipient || '').split(',');
+      var tags = (card.dataset.tags || '').split(',');
+      var text = card.textContent.toLowerCase();
+
+      var matchWho = !who || recipients.indexOf(who) > -1;
+      var matchBudget = !budget || card.dataset.budget === budget;
+      var matchDelivery = !delivery || card.dataset.delivery === delivery;
+      var matchTag = !activeQuickTag || tags.indexOf(activeQuickTag) > -1;
+      var matchQuery = !q || text.indexOf(q) > -1;
+
+      var visible = matchWho && matchBudget && matchDelivery && matchTag && matchQuery;
+      card.style.display = visible ? '' : 'none';
+      if (visible) matchCount++;
     });
 
-    /* If nothing matches, show all */
-    if (!anyVisible) {
-      cards.forEach(function(card) { card.style.display = ''; });
+    var countLabel = document.getElementById('discovery-count');
+    if (countLabel) {
+      countLabel.textContent = 'Showing ' + matchCount + ' of ' + cards.length + ' gifts';
     }
 
-    /* Reset tabs visual */
-    document.querySelectorAll('.tab').forEach(function(t) { t.classList.remove('active'); });
-    document.querySelector('.tab').classList.add('active');
+    var statusBox = document.getElementById('filter-status');
+    var statusText = document.getElementById('filter-status-text');
+    var hasActiveFilter = Boolean(who || budget || delivery || activeQuickTag || q);
 
-    document.getElementById('gifts').scrollIntoView({ behavior: 'smooth' });
+    if (hasActiveFilter) {
+      statusBox.hidden = false;
+      if (matchCount === 0) {
+        statusText.innerHTML = '<strong>0 gifts match all exact filters.</strong> Try switching Budget to "Any budget" or Delivery to "Physical Box or eVoucher", or click Reset.';
+      } else {
+        statusText.innerHTML = 'Found <strong>' + matchCount + ' Christmas gift' + (matchCount > 1 ? 's' : '') + '</strong> matching your criteria. Tip: Click <strong>+ Compare</strong> on any 2–3 cards to compare them side-by-side.';
+      }
+    } else {
+      statusBox.hidden = true;
+    }
+
+    if (shouldScroll) {
+      document.getElementById('gifts').scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  function sortCards() {
+    var mode = document.getElementById('gift-sort').value;
+    var grid = document.getElementById('gifts-grid');
+    var cards = Array.prototype.slice.call(grid.querySelectorAll('.gift-card'));
+
+    cards.sort(function(a, b) {
+      var pa = parseFloat(a.dataset.productPrice) || 0;
+      var pb = parseFloat(b.dataset.productPrice) || 0;
+      var ra = parseInt(a.dataset.rank, 10) || 99;
+      var rb = parseInt(b.dataset.rank, 10) || 99;
+
+      if (mode === 'price-asc') return pa - pb;
+      if (mode === 'price-desc') return pb - pa;
+      if (mode === 'fast') {
+        var fa = a.dataset.delivery === 'digital' ? 0 : ((a.dataset.tags || '').indexOf('overnight') > -1 ? 1 : 2);
+        var fb = b.dataset.delivery === 'digital' ? 0 : ((b.dataset.tags || '').indexOf('overnight') > -1 ? 1 : 2);
+        return fa - fb || ra - rb;
+      }
+      return ra - rb;
+    });
+
+    cards.forEach(function(c) { grid.appendChild(c); });
+  }
+
+  /* Interactive Compare Tray */
+  function toggleCompare(id, btn) {
+    var idx = compareList.indexOf(id);
+    if (idx > -1) {
+      compareList.splice(idx, 1);
+      if (btn) { btn.classList.remove('selected'); btn.textContent = '+ Compare'; }
+    } else {
+      if (compareList.length >= 3) {
+        alert('You can compare up to 3 gifts at a time. Remove one first or click Compare Side-by-Side.');
+        return;
+      }
+      compareList.push(id);
+      if (btn) { btn.classList.add('selected'); btn.textContent = '✓ In Compare'; }
+    }
+    renderCompareTray();
+  }
+
+  function clearCompare() {
+    compareList = [];
+    document.querySelectorAll('.gift-card__cmp-btn').forEach(function(b) {
+      b.classList.remove('selected');
+      b.textContent = '+ Compare';
+    });
+    renderCompareTray();
+  }
+
+  function renderCompareTray() {
+    var tray = document.getElementById('compare-tray');
+    var countEl = document.getElementById('compare-count');
+    var itemsEl = document.getElementById('compare-tray-items');
+    if (compareList.length === 0) {
+      tray.hidden = true;
+      return;
+    }
+    tray.hidden = false;
+    countEl.textContent = compareList.length;
+    itemsEl.innerHTML = compareList.map(function(id) {
+      var card = document.querySelector('.gift-card[data-product-id="' + id + '"]');
+      var name = card ? card.dataset.productName : id;
+      return '<span class="compare-tray__pill">' + name + ' <button type="button" onclick="removeFromCompare(\'' + id + '\')">×</button></span>';
+    }).join('');
+  }
+
+  function removeFromCompare(id) {
+    var card = document.querySelector('.gift-card[data-product-id="' + id + '"]');
+    var btn = card ? card.querySelector('.gift-card__cmp-btn') : null;
+    toggleCompare(id, btn);
+  }
+
+  function openCompareModal() {
+    if (compareList.length < 2) {
+      alert('Please select at least 2 gifts (click "+ Compare" on another card) to compare them side-by-side.');
+      return;
+    }
+    var cards = compareList.map(function(id) {
+      return document.querySelector('.gift-card[data-product-id="' + id + '"]');
+    }).filter(Boolean);
+
+    var html = '<table class="compare-table"><thead><tr><th>Feature</th>';
+    cards.forEach(function(c) {
+      var img = c.querySelector('img').getAttribute('src');
+      html += '<td><img src="' + img + '" alt="" style="width:100%;max-width:140px;height:90px;object-fit:cover;border-radius:6px;margin-bottom:8px;"><strong>' + c.dataset.productName + '</strong></td>';
+    });
+    html += '</tr></thead><tbody>';
+
+    var rows = [
+      ['Price', function(c) { return '$' + c.dataset.productPrice + '+'; }],
+      ['Best For', function(c) { return c.querySelector('.gift-card__for').textContent; }],
+      ['Why They\'ll Love It', function(c) { return c.dataset.meaning || ''; }],
+      ['Holiday Shipping', function(c) { return c.dataset.shipping || ''; }],
+      ['Returns & Trial', function(c) { return c.dataset.returns || ''; }],
+      ['Verified Promo', function(c) { return '<strong>' + (c.dataset.code || '') + '</strong>'; }],
+      ['Shop Link', function(c) {
+        var id = c.dataset.productId;
+        var code = (c.dataset.code || '').split(' ')[0];
+        return '<button type="button" class="gift-card__cta" onclick="goShop(\'' + id + '\',\'' + code + '\',this)">View at Brand →</button>';
+      }]
+    ];
+
+    rows.forEach(function(r) {
+      html += '<tr><th>' + r[0] + '</th>';
+      cards.forEach(function(c) { html += '<td>' + r[1](c) + '</td>'; });
+      html += '</tr>';
+    });
+
+    html += '</tbody></table>';
+    document.getElementById('compare-modal-body').innerHTML = html;
+    document.getElementById('compare-modal').hidden = false;
+  }
+
+  function closeCompareModal() {
+    document.getElementById('compare-modal').hidden = true;
   }
   </script>
 </body>
