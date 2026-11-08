@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The 7 Best Holiday Gifts of 2026 | The Curated Living</title>
-  <meta name="description" content="We tested 40+ holiday gifts and narrowed it down to 7. These are the best gifts of 2026 — from crowd-pleasers to last-minute saves.">
+  <title>Christmas Gift Guide 2026 — Find the Perfect Gift | The Curated Living</title>
+  <meta name="description" content="Our curated Christmas gift guide helps you find the perfect present for everyone on your list — parents, partner, friends, and colleagues. 7 expert-tested picks from $98 to $1,499.">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="The 7 Best Holiday Gifts of 2026 | The Curated Living">
-  <meta property="og:description" content="We tested 40+ holiday gifts and narrowed it down to 7. These are the best gifts of 2026 — from crowd-pleasers to last-minute saves.">
-  <meta property="og:image" content="images/hero.jpg">
-  <meta property="og:url" content="gift-guide.html">
+  <meta property="og:title" content="Christmas Gift Guide 2026 — Find the Perfect Gift | The Curated Living">
+  <meta property="og:description" content="Find the perfect Christmas gift for everyone on your list. 7 expert-tested picks from $98 to $1,499.">
+  <meta property="og:image" content="images/hero-christmas.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="css/style.css">
   <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','YOUR_PIXEL_ID');fbq('track','PageView');</script>
 </head>
 <body>
 
+  <!-- Header -->
   <header class="site-header">
     <div class="site-header__inner">
       <a href="index.html" class="site-header__logo">The Curated Living</a>
@@ -27,248 +27,390 @@
     </div>
   </header>
 
-  <article class="container--narrow prose">
+  <!-- ==================== HERO ==================== -->
+  <section class="hero">
+    <div class="hero__bg"><img src="images/hero-christmas.jpg" alt="Christmas tree, wrapped gifts, and warm holiday scene"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <div class="hero__eyebrow">🎄 Christmas Gift Guide 2026</div>
+      <h1 class="hero__title">The right gift for the right person. A Christmas worth remembering.</h1>
+      <p class="hero__subtitle">We tested over 40 gifts and selected 7 that people actually keep, use, and talk about months later. Let us help you find the perfect one.</p>
 
-    <div class="article-category">Gift Guides</div>
-    <h1 class="article-title">The 7 Best Holiday Gifts of 2026</h1>
-    <p class="article-dek">We tested over 40 gifts across every price range and whittled them down to seven — the ones people actually keep, use, and talk about months later.</p>
-    <div class="byline">
-      <div class="byline__avatar">EV</div>
-      <div>
-        <div class="byline__name">Eleanor Vance</div>
-        <div class="byline__meta">Updated Nov. 8, 2026 · 9 min. read</div>
+      <div class="finder">
+        <div class="finder__title">Find Your Perfect Gift in 3 Steps</div>
+        <div class="finder__steps">
+          <div class="finder__step">
+            <div class="finder__step-label"><span class="finder__step-num">1</span> Who is it for?</div>
+            <select class="finder__select" id="finder-who">
+              <option value="">Choose recipient…</option>
+              <option value="parents">Parents</option>
+              <option value="partner">Partner</option>
+              <option value="friends">Friends &amp; Hosts</option>
+              <option value="colleagues">Colleagues</option>
+              <option value="tech">Tech Enthusiast</option>
+            </select>
+          </div>
+          <div class="finder__step">
+            <div class="finder__step-label"><span class="finder__step-num">2</span> Your budget?</div>
+            <select class="finder__select" id="finder-budget">
+              <option value="">Select range…</option>
+              <option value="under100">Under $100</option>
+              <option value="100-500">$100 – $500</option>
+              <option value="500plus">$500+</option>
+            </select>
+          </div>
+          <div class="finder__step">
+            <div class="finder__step-label"><span class="finder__step-num">3</span> Delivery?</div>
+            <select class="finder__select" id="finder-delivery">
+              <option value="">Any delivery…</option>
+              <option value="physical">Physical gift</option>
+              <option value="digital">Instant eVoucher</option>
+            </select>
+          </div>
+        </div>
+        <button class="finder__btn" onclick="filterAndScroll()">🎁 Find the Perfect Gift</button>
       </div>
     </div>
+  </section>
 
-    <figure class="hero-img">
-      <img src="images/hero.jpg" alt="A curated spread of the seven best holiday gifts of 2026 arranged on a marble countertop" loading="eager">
-      <figcaption>Photo: The Curated Living</figcaption>
-    </figure>
+  <!-- ==================== GIFT PICKS ==================== -->
+  <section class="section" id="gifts">
+    <div class="container">
+      <div class="section__eyebrow">Curated Picks</div>
+      <h2 class="section__title">Gifts They'll Actually Love</h2>
+      <p class="section__desc">Every gift below was hand-tested by our editors and scored 8.0+ across wow factor, value, shipping reliability, and returns.</p>
 
-    <p>Every fall, our team disappears into a mountain of packages. This year we started with 43 products — things we'd actually consider giving to people we like — and spent six weeks living with them, gifting them to unsuspecting friends and family, and tracking what happened next. We scored every item on a 10-point scale across four categories: wow factor, value for money, shipping reliability, and return policy. Only products averaging 8.0 or above survived. Seven did.</p>
+      <div class="tabs">
+        <button class="tab active" onclick="showTab('all',this)">All Picks</button>
+        <button class="tab" onclick="showTab('parents',this)">For Parents</button>
+        <button class="tab" onclick="showTab('partner',this)">For Your Partner</button>
+        <button class="tab" onclick="showTab('friends',this)">For Friends &amp; Hosts</button>
+        <button class="tab" onclick="showTab('tech',this)">For Tech Lovers</button>
+      </div>
 
-    <p>We've organized this guide to help you find the right gift fast. Up top are the crowd-pleasers — safe, universally loved picks that work for nearly anyone on your list. Next come our editor's choices, the three gifts we'd personally stake our reputation on. And at the bottom, two big-ticket tech picks for the person who already has everything but still wants more.</p>
+      <div class="gifts-grid" id="gifts-grid">
 
-    <nav class="toc">
-      <div class="toc__title">What's in this guide</div>
-      <ol>
-        <li><a href="#boarderie">Boarderie Artisan Charcuterie Board</a></li>
-        <li><a href="#storyworth">StoryWorth Memory Book</a></li>
-        <li><a href="#cozyearth">Cozy Earth Bamboo Bedding Bundle</a> — our pick</li>
-        <li><a href="#revomadic">REVOMADIC Deep-Tissue Massager</a> — also great</li>
-        <li><a href="#tinggly">Tinggly Experience Gift Box</a> — best last-minute</li>
-        <li><a href="#bluetti">Bluetti Portable Power Station</a></li>
-        <li><a href="#jmgo">JMGO 4K Laser Projector</a></li>
-      </ol>
-    </nav>
-
-    <!-- ============================== -->
-    <!-- SECTION: The Crowd-Pleasers    -->
-    <!-- ============================== -->
-    <h3>The Crowd-Pleasers</h3>
-    <h2>Two gifts you can't go wrong with</h2>
-
-    <p>These are the gifts that earn audible reactions when unwrapped and don't require you to know someone's ring size, shoe brand, or opinion on smart-home ecosystems. One is edible, the other is sentimental — together, they cover about 80 percent of the people on any reasonable holiday list.</p>
-
-    <!-- Product 1: Boarderie -->
-    <div class="product-card" id="boarderie" data-product-id="boarderie" data-product-name="Boarderie Artisan Charcuterie" data-product-price="169">
-      <div class="product-card__label product-card__label--great">Great for hosts</div>
-      <div class="product-card__inner">
-        <div class="product-card__img">
-          <img src="images/boarderie.jpg" alt="Boarderie Artisan Charcuterie Board" style="width:100%;height:100%;object-fit:cover;">
+        <!-- ── 1. Boarderie ── -->
+        <div class="gift-card" data-product-id="boarderie" data-product-name="Boarderie Artisan Charcuterie" data-product-price="169" data-recipient="friends,parents" data-budget="100-500" data-delivery="physical">
+          <div class="gift-card__img">
+            <img src="images/boarderie.jpg" alt="Boarderie artisan charcuterie board with imported cheeses, cured meats, crackers and dried fruits on a handcrafted wooden board">
+            <span class="gift-card__badge gift-card__badge--pick">Editor's Pick</span>
+          </div>
+          <div class="gift-card__body">
+            <div class="gift-card__for">Perfect for Friends, Hosts &amp; Parents</div>
+            <h3 class="gift-card__name">Boarderie Pre-Assembled Artisan Charcuterie Board</h3>
+            <div class="gift-card__price">$169 – $249 · Free FedEx Priority Overnight</div>
+            <p class="gift-card__why">Arrives fully arranged with imported cheeses, cured meats, and crackers on a handcrafted wooden board. Looks like something out of a food magazine — and the board becomes a permanent kitchen keepsake. Order as late as Dec. 22.</p>
+            <div class="gift-card__meta">
+              <span>📦 Free overnight ship</span>
+              <span>↩️ 100% satisfaction</span>
+              <span>🎁 Gift-ready</span>
+            </div>
+            <button class="gift-card__cta" onclick="goShop('boarderie','BOARD10',this)">View at Boarderie →</button>
+            <div class="gift-card__code">Use code <strong>BOARD10</strong> for $10 off · <button onclick="copyCode('BOARD10',this)">copy</button></div>
+          </div>
         </div>
-        <div class="product-card__body">
-          <div class="product-card__name">Boarderie Pre-Assembled Artisan Charcuterie Board</div>
-          <div class="product-card__price">$169 to $249 · Free FedEx Priority Overnight</div>
-          <div class="product-card__desc">Here's the thing about charcuterie boards: everyone loves receiving one, and almost no one wants to assemble one themselves. Boarderie solves that completely. The board arrives fully arranged — imported cheeses, cured meats, dried fruits, crackers, honey, the works — on a handcrafted wooden board that becomes a permanent addition to the recipient's kitchen. We ordered the Classic ($169) for a friend's housewarming and the Grand ($249) for Thanksgiving at my in-laws'. Both showed up looking like something out of a food magazine, chilled and sealed in insulated packaging. The cheeses were properly tempered within 30 minutes. Nothing was squished, nothing was sad. The wooden board itself is thick, well-finished, and has held up through multiple dinner parties since. It's the rare gift that's impressive on arrival and useful long after the last cracker is gone.</div>
-          <ul class="product-card__pros">
-            <li>Ships overnight, free — order as late as Dec. 22</li>
-            <li>No prep required; looks impressive immediately</li>
-            <li>Board itself is a reusable keepsake</li>
-          </ul>
-          <button class="buy-btn" onclick="goShop('boarderie','BOARD10',this)">$169+ at Boarderie</button>
-          <div class="promo-note">Use code <strong>BOARD10</strong> for $10 off · <button class="copy-link" onclick="copyCode('BOARD10',this)">copy code</button></div>
+
+        <!-- ── 2. StoryWorth ── -->
+        <div class="gift-card" data-product-id="storyworth" data-product-name="StoryWorth Memory Book" data-product-price="99" data-recipient="parents" data-budget="under100" data-delivery="digital">
+          <div class="gift-card__img">
+            <img src="images/storyworth.jpg" alt="StoryWorth Memory Book — a year of family stories compiled into a hardcover book">
+            <span class="gift-card__badge gift-card__badge--value">Best Value</span>
+          </div>
+          <div class="gift-card__body">
+            <div class="gift-card__for">Perfect for Parents &amp; Grandparents</div>
+            <h3 class="gift-card__name">StoryWorth Memory Book</h3>
+            <div class="gift-card__price">$99/year · Instant digital delivery</div>
+            <p class="gift-card__why">Weekly questions, a year of family stories, compiled into a hardcover book. Our tester's dad answered 47 of 48 questions — stories his kids had never heard. At $99 for a year of engagement plus a keepsake book, the value is extraordinary.</p>
+            <div class="gift-card__meta">
+              <span>📦 Instant digital</span>
+              <span>↩️ Full refund</span>
+              <span>🎁 Year-long gift</span>
+            </div>
+            <button class="gift-card__cta" onclick="goShop('storyworth','STORY10',this)">View at StoryWorth →</button>
+            <div class="gift-card__code">Use code <strong>STORY10</strong> for $10 off · <button onclick="copyCode('STORY10',this)">copy</button></div>
+          </div>
+        </div>
+
+        <!-- ── 3. Cozy Earth ── -->
+        <div class="gift-card" data-product-id="cozyearth" data-product-name="Cozy Earth Bamboo Bedding Bundle" data-product-price="471" data-recipient="partner,parents" data-budget="100-500" data-delivery="physical">
+          <div class="gift-card__img">
+            <img src="images/cozyearth.jpg" alt="Cozy Earth bamboo sheet set and duvet cover in neutral tones on a beautifully made bed">
+            <span class="gift-card__badge gift-card__badge--pick">Our Top Pick</span>
+          </div>
+          <div class="gift-card__body">
+            <div class="gift-card__for">Perfect for Partner &amp; Parents</div>
+            <h3 class="gift-card__name">Cozy Earth Bamboo Bedding Bundle</h3>
+            <div class="gift-card__price">$471 – $651 · Free 2-day shipping by Dec. 18</div>
+            <p class="gift-card__why">Oprah's Favorite Things five years running. Buttery bamboo viscose that stays cool in summer and warm in winter. After 20+ washes — no pilling, no fading. Bundle saves ~35% versus buying pieces individually. The luxury they won't buy themselves.</p>
+            <div class="gift-card__meta">
+              <span>📦 Free 2-day ship</span>
+              <span>↩️ 100-night trial</span>
+              <span>🎁 Bundle deal</span>
+            </div>
+            <button class="gift-card__cta" onclick="goShop('cozyearth','CE-LORNA',this)">View at Cozy Earth →</button>
+            <div class="gift-card__code">Use code <strong>CE-LORNA</strong> for 20% off · <button onclick="copyCode('CE-LORNA',this)">copy</button></div>
+          </div>
+        </div>
+
+        <!-- ── 4. REVOMADIC ── -->
+        <div class="gift-card" data-product-id="revomadic" data-product-name="REVOMADIC Deep-Tissue Massager" data-product-price="98" data-recipient="parents,friends,colleagues" data-budget="under100" data-delivery="physical">
+          <div class="gift-card__img">
+            <img src="images/revomadic.webp" alt="REVOMADIC deep-tissue massage gun with brushed aluminum body and six attachment heads">
+            <span class="gift-card__badge gift-card__badge--value">Best Value</span>
+          </div>
+          <div class="gift-card__body">
+            <div class="gift-card__for">Perfect for Anyone Who Has a Body</div>
+            <h3 class="gift-card__name">REVOMADIC Deep-Tissue Massager</h3>
+            <div class="gift-card__price">$98 <s>$149</s> · Ships by Dec. 19</div>
+            <p class="gift-card__why">3,200 RPM at under 45 dB — quiet enough to use on a phone call. The heated attachment reaches 110°F in 30 seconds and makes a real difference on tight shoulders. Feels like a $200 device at under $100. Converts every skeptic.</p>
+            <div class="gift-card__meta">
+              <span>📦 Ships Dec 19</span>
+              <span>↩️ 30-day return</span>
+              <span>🎁 6-head kit included</span>
+            </div>
+            <button class="gift-card__cta" onclick="goShop('revomadic','REVO15',this)">View at REVOMADIC →</button>
+            <div class="gift-card__code">Use code <strong>REVO15</strong> for 15% off · <button onclick="copyCode('REVO15',this)">copy</button></div>
+          </div>
+        </div>
+
+        <!-- ── 5. Tinggly ── -->
+        <div class="gift-card" data-product-id="tinggly" data-product-name="Tinggly Experience Gift Box" data-product-price="351" data-recipient="partner,friends" data-budget="100-500" data-delivery="digital">
+          <div class="gift-card__img">
+            <img src="images/tinggly.jpg" alt="Tinggly experience gift box — hot air balloons, cooking classes, and adventure experiences worldwide">
+            <span class="gift-card__badge gift-card__badge--lastmin">Last-Minute Hero</span>
+          </div>
+          <div class="gift-card__body">
+            <div class="gift-card__for">Perfect for Partner &amp; Experience Lovers</div>
+            <h3 class="gift-card__name">Tinggly Experience Gift Box</h3>
+            <div class="gift-card__price">$351 – $458 · Instant e-voucher delivery</div>
+            <p class="gift-card__why">10,000+ curated experiences across 100+ countries — from hot-air balloon rides to cooking classes. Send at 11:59 PM on Christmas Eve and it arrives instantly. Voucher never expires. The elegant last-minute save that doesn't feel last-minute at all.</p>
+            <div class="gift-card__meta">
+              <span>📦 Instant delivery</span>
+              <span>↩️ Never expires</span>
+              <span>🎁 100+ countries</span>
+            </div>
+            <button class="gift-card__cta" onclick="goShop('tinggly','WELCOME10',this)">View at Tinggly →</button>
+            <div class="gift-card__code">Use code <strong>WELCOME10</strong> for 10% off · <button onclick="copyCode('WELCOME10',this)">copy</button></div>
+          </div>
+        </div>
+
+        <!-- ── 6. Bluetti ── -->
+        <div class="gift-card" data-product-id="bluetti" data-product-name="Bluetti Portable Power Station" data-product-price="899" data-recipient="tech,parents" data-budget="500plus" data-delivery="physical">
+          <div class="gift-card__img">
+            <img src="images/bluetti.jpg" alt="Bluetti AC180 portable power station with LCD display and multiple outlet ports">
+            <span class="gift-card__badge gift-card__badge--pick">Best for Home</span>
+          </div>
+          <div class="gift-card__body">
+            <div class="gift-card__for">Perfect for Homeowners &amp; Dads</div>
+            <h3 class="gift-card__name">Bluetti Portable Power Station (AC180 / AC200)</h3>
+            <div class="gift-card__price">$899 – $1,499 · Ships by Dec. 16</div>
+            <p class="gift-card__why">Ran our fridge, a floor lamp, and two phones through a 4-hour outage without breaking a sweat. Charges to 80% in ~45 minutes. Solar compatible for camping. The boring closet item that becomes the hero during winter storms. Holiday bundles save up to $450.</p>
+            <div class="gift-card__meta">
+              <span>📦 Ships Dec 16</span>
+              <span>↩️ 30-day return</span>
+              <span>🎁 Bundle + solar</span>
+            </div>
+            <button class="gift-card__cta" onclick="goShop('bluetti','BLUETTI50',this)">View at Bluetti →</button>
+            <div class="gift-card__code">Use code <strong>BLUETTI50</strong> for $50 off · <button onclick="copyCode('BLUETTI50',this)">copy</button></div>
+          </div>
+        </div>
+
+        <!-- ── 7. JMGO ── -->
+        <div class="gift-card" data-product-id="jmgo" data-product-name="JMGO N1 Ultra 4K Laser Projector" data-product-price="799" data-recipient="tech,partner" data-budget="500plus" data-delivery="physical">
+          <div class="gift-card__img">
+            <img src="images/jmgo.jpg" alt="JMGO N1 Ultra 4K laser projector displaying a vivid movie on a 150-inch wall screen">
+            <span class="gift-card__badge gift-card__badge--pick">Best for Fun</span>
+          </div>
+          <div class="gift-card__body">
+            <div class="gift-card__for">Perfect for Movie Lovers &amp; Tech Fans</div>
+            <h3 class="gift-card__name">JMGO N1 Ultra 4K Laser Projector</h3>
+            <div class="gift-card__price">$799 – $1,299 · Ships by Dec. 17</div>
+            <p class="gift-card__why">Triple-laser 4K at up to 150 inches with 2,200 ANSI lumens. Gimbal auto-focus means zero manual setup — just set it down and it corrects itself. Built-in Dynaudio speakers and Google TV. It replaced our 65-inch TV, and we haven't looked back.</p>
+            <div class="gift-card__meta">
+              <span>📦 Ships Dec 17</span>
+              <span>↩️ 30-day return</span>
+              <span>🎁 Google TV built-in</span>
+            </div>
+            <button class="gift-card__cta" onclick="goShop('jmgo','JMGO100',this)">View at JMGO →</button>
+            <div class="gift-card__code">Use code <strong>JMGO100</strong> for $100 off · <button onclick="copyCode('JMGO100',this)">copy</button></div>
+          </div>
+        </div>
+
+      </div><!-- /gifts-grid -->
+    </div>
+  </section>
+
+  <!-- ==================== COMPARE ==================== -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section__eyebrow">Side by Side</div>
+      <h2 class="section__title">Compare Your Options</h2>
+      <p class="section__desc">Not sure which to pick? We put similar options head-to-head so you can decide with confidence.</p>
+
+      <!-- Compare 1: Relaxation for Mom -->
+      <div class="compare-group">
+        <h3 class="compare-group__title">Relaxation Gifts for Mom</h3>
+        <p class="compare-group__subtitle">Two ways to help her unwind — one wraps her in luxury, the other melts her tension away</p>
+        <div class="compare-cards">
+          <div class="compare-card compare-card--winner">
+            <div class="compare-card__head">
+              <div class="compare-card__thumb"><img src="images/cozyearth.jpg" alt="Cozy Earth"></div>
+              <div><div class="compare-card__brand">Cozy Earth Bundle</div><div class="compare-card__price-tag">From $471</div></div>
+            </div>
+            <div class="compare-card__row"><span class="compare-card__label">Meaning</span><span class="compare-card__value">Everyday luxury she won't buy herself</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Delivery</span><span class="compare-card__value">Free 2-day by Dec 18</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Returns</span><span class="compare-card__value">100-night trial</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Best if</span><span class="compare-card__value">She values sleep quality</span></div>
+          </div>
+          <span class="compare-vs">VS</span>
+          <div class="compare-card">
+            <div class="compare-card__head">
+              <div class="compare-card__thumb"><img src="images/revomadic.webp" alt="REVOMADIC"></div>
+              <div><div class="compare-card__brand">REVOMADIC Massager</div><div class="compare-card__price-tag">$98</div></div>
+            </div>
+            <div class="compare-card__row"><span class="compare-card__label">Meaning</span><span class="compare-card__value">Active relief for daily tension</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Delivery</span><span class="compare-card__value">Ships by Dec 19</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Returns</span><span class="compare-card__value">30-day money back</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Best if</span><span class="compare-card__value">She exercises or has back pain</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Compare 2: Experience for Couples -->
+      <div class="compare-group">
+        <h3 class="compare-group__title">Experience Gifts for Couples</h3>
+        <p class="compare-group__subtitle">Create memories together — one takes you around the world, the other brings the cinema home</p>
+        <div class="compare-cards">
+          <div class="compare-card compare-card--winner">
+            <div class="compare-card__head">
+              <div class="compare-card__thumb"><img src="images/tinggly.jpg" alt="Tinggly"></div>
+              <div><div class="compare-card__brand">Tinggly Experience Box</div><div class="compare-card__price-tag">From $351</div></div>
+            </div>
+            <div class="compare-card__row"><span class="compare-card__label">Meaning</span><span class="compare-card__value">Adventure &amp; shared memories</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Delivery</span><span class="compare-card__value">Instant e-voucher</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Returns</span><span class="compare-card__value">Voucher never expires</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Best if</span><span class="compare-card__value">They love travel &amp; new experiences</span></div>
+          </div>
+          <span class="compare-vs">VS</span>
+          <div class="compare-card">
+            <div class="compare-card__head">
+              <div class="compare-card__thumb"><img src="images/jmgo.jpg" alt="JMGO"></div>
+              <div><div class="compare-card__brand">JMGO 4K Projector</div><div class="compare-card__price-tag">From $799</div></div>
+            </div>
+            <div class="compare-card__row"><span class="compare-card__label">Meaning</span><span class="compare-card__value">Nightly movie nights together</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Delivery</span><span class="compare-card__value">Ships by Dec 17</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Returns</span><span class="compare-card__value">30-day return window</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Best if</span><span class="compare-card__value">They're homebodies &amp; movie fans</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Compare 3: Tech for Dad -->
+      <div class="compare-group">
+        <h3 class="compare-group__title">Tech Gifts for Dad &amp; Homeowners</h3>
+        <p class="compare-group__subtitle">Practical power or pure entertainment — both are conversation starters</p>
+        <div class="compare-cards">
+          <div class="compare-card">
+            <div class="compare-card__head">
+              <div class="compare-card__thumb"><img src="images/bluetti.jpg" alt="Bluetti"></div>
+              <div><div class="compare-card__brand">Bluetti Power Station</div><div class="compare-card__price-tag">From $899</div></div>
+            </div>
+            <div class="compare-card__row"><span class="compare-card__label">Meaning</span><span class="compare-card__value">Peace of mind during outages</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Delivery</span><span class="compare-card__value">Ships by Dec 16</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Returns</span><span class="compare-card__value">30-day return</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Best if</span><span class="compare-card__value">He worries about power outages</span></div>
+          </div>
+          <span class="compare-vs">VS</span>
+          <div class="compare-card">
+            <div class="compare-card__head">
+              <div class="compare-card__thumb"><img src="images/jmgo.jpg" alt="JMGO"></div>
+              <div><div class="compare-card__brand">JMGO 4K Projector</div><div class="compare-card__price-tag">From $799</div></div>
+            </div>
+            <div class="compare-card__row"><span class="compare-card__label">Meaning</span><span class="compare-card__value">Home theater upgrade</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Delivery</span><span class="compare-card__value">Ships by Dec 17</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Returns</span><span class="compare-card__value">30-day return</span></div>
+            <div class="compare-card__row"><span class="compare-card__label">Best if</span><span class="compare-card__value">He's been eyeing a big screen</span></div>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Product 2: StoryWorth -->
-    <div class="product-card" id="storyworth" data-product-id="storyworth" data-product-name="StoryWorth Memory Book" data-product-price="99">
-      <div class="product-card__label product-card__label--great">Best sentimental gift</div>
-      <div class="product-card__inner">
-        <div class="product-card__img">
-          <img src="images/storyworth.jpg" alt="StoryWorth Memory Book" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-        <div class="product-card__body">
-          <div class="product-card__name">StoryWorth Memory Book</div>
-          <div class="product-card__price">$99/year · Instant digital gift card delivery</div>
-          <div class="product-card__desc">I gave StoryWorth to my dad last Christmas and it has become, without exaggeration, the most meaningful gift I've ever given anyone. Here's how it works: every week for a year, StoryWorth emails your recipient a thoughtful question — "What's the bravest thing you've ever done?" or "What was your neighborhood like growing up?" They reply by email or through the app, adding photos if they want. At the end of the year, all those answers get compiled into a beautifully bound hardcover book. My dad, who claims to hate technology, has answered 47 out of 48 questions so far. Some answers are two sentences; others are three pages of stories I'd never heard. My siblings and I read them in our group chat. The book arrives next month, and my mom has already asked for her own subscription. You gift it instantly — StoryWorth sends a digital card to the recipient's email — which means there's nothing to wrap and no shipping to worry about. At $99 for an entire year of weekly engagement plus a hardcover book, the per-interaction cost is absurdly low.</div>
-          <ul class="product-card__pros">
-            <li>Instant digital delivery — nothing to ship</li>
-            <li>Year-long engagement, not a one-day gift</li>
-            <li>Hardcover book is a permanent family keepsake</li>
-          </ul>
-          <button class="buy-btn" onclick="goShop('storyworth','STORY10',this)">$99 at StoryWorth</button>
-          <div class="promo-note">Use code <strong>STORY10</strong> for $10 off · <button class="copy-link" onclick="copyCode('STORY10',this)">copy code</button></div>
-        </div>
-      </div>
-    </div>
+  <!-- ==================== DEALS ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section__eyebrow">Verified Deals</div>
+      <h2 class="section__title">Holiday Promo Codes</h2>
+      <p class="section__desc">Every code below has been verified by our team. Copy and apply at checkout for instant savings.</p>
 
-    <!-- ============================== -->
-    <!-- SECTION: Editor's Choices      -->
-    <!-- ============================== -->
-    <hr class="section-divider">
-    <h3>Editor's Choices</h3>
-    <h2>Three gifts we'd stake our reputation on</h2>
-
-    <p>If you ask anyone on our team what they'd personally give this year — not what tests well, not what's trending on TikTok, but what they're actually putting under a tree — these are the three. One is a luxury people won't buy for themselves, one is a recovery tool that converts skeptics, and one is a last-minute lifeline that doesn't feel last-minute at all.</p>
-
-    <!-- Product 3: Cozy Earth -->
-    <div class="product-card" id="cozyearth" data-product-id="cozyearth" data-product-name="Cozy Earth Bamboo Bedding Bundle" data-product-price="471">
-      <div class="product-card__label product-card__label--pick">Our pick</div>
-      <div class="product-card__inner">
-        <div class="product-card__img">
-          <img src="images/cozyearth.jpg" alt="Cozy Earth Bamboo Bedding Bundle" style="width:100%;height:100%;object-fit:cover;">
+      <div class="deals-grid">
+        <div class="deal-card">
+          <div class="deal-card__brand">Boarderie</div>
+          <div class="deal-card__offer">$10 off any board</div>
+          <div class="deal-card__code" onclick="copyCode('BOARD10',this)">BOARD10</div>
+          <button class="deal-card__btn" onclick="goShop('boarderie','BOARD10',this)">Shop Boarderie →</button>
         </div>
-        <div class="product-card__body">
-          <div class="product-card__name">Cozy Earth Bamboo Bedding Bundle</div>
-          <div class="product-card__price">$471 to $651 · Free 2-day shipping by Dec. 18</div>
-          <div class="product-card__desc">There's a reason Cozy Earth has landed on Oprah's Favorite Things list five years running, and it's not marketing — it's the fabric. Their bamboo viscose has a buttery, almost cool-to-the-touch hand feel that's genuinely different from cotton, linen, or synthetic "cooling" sheets. We've been sleeping on a set since August, and the temperature regulation is real: the sheets stay cool in summer and don't feel cold and clammy in fall. They wash well, too. After 20+ cycles, ours show no pilling and the color (we have the "porcelain") hasn't faded. The bundle includes a fitted sheet, flat sheet, duvet cover, and four pillowcases, which is a lot of fabric for the money — especially since individual pieces from comparable brands (Brooklinen, Ettitude) would cost more bought separately. The 100-night trial is generous and the return process is straightforward; we verified it with a test return that took six days from label print to refund.</div>
-          <p>The smart play: buy the bundle. It saves roughly 35% compared to buying the pieces individually, and the coordinated set avoids the mismatched-whites problem that plagues à la carte bedding purchases.</p>
-          <ul class="product-card__pros">
-            <li>Oprah's Favorite Things — five consecutive years</li>
-            <li>100-night trial with hassle-free returns</li>
-            <li>Bundle saves ~35% versus buying pieces individually</li>
-          </ul>
-          <button class="buy-btn" onclick="goShop('cozyearth','CE-LORNA',this)">$471+ at Cozy Earth</button>
-          <div class="promo-note">Use code <strong>CE-LORNA</strong> for 20% off · <button class="copy-link" onclick="copyCode('CE-LORNA',this)">copy code</button></div>
+        <div class="deal-card">
+          <div class="deal-card__brand">StoryWorth</div>
+          <div class="deal-card__offer">$10 off subscription</div>
+          <div class="deal-card__code" onclick="copyCode('STORY10',this)">STORY10</div>
+          <button class="deal-card__btn" onclick="goShop('storyworth','STORY10',this)">Shop StoryWorth →</button>
         </div>
-      </div>
-    </div>
-
-    <!-- Product 4: REVOMADIC -->
-    <div class="product-card" id="revomadic" data-product-id="revomadic" data-product-name="REVOMADIC Deep-Tissue Massager" data-product-price="98">
-      <div class="product-card__label product-card__label--great">Also great</div>
-      <div class="product-card__inner">
-        <div class="product-card__img">
-          <img src="images/revomadic.webp" alt="REVOMADIC Deep-Tissue Massager" style="width:100%;height:100%;object-fit:cover;">
+        <div class="deal-card">
+          <div class="deal-card__brand">Cozy Earth</div>
+          <div class="deal-card__offer">20% off entire order</div>
+          <div class="deal-card__code" onclick="copyCode('CE-LORNA',this)">CE-LORNA</div>
+          <button class="deal-card__btn" onclick="goShop('cozyearth','CE-LORNA',this)">Shop Cozy Earth →</button>
         </div>
-        <div class="product-card__body">
-          <div class="product-card__name">REVOMADIC Deep-Tissue Massager</div>
-          <div class="product-card__price">$98 <s>$149</s> · Ships by Dec. 19</div>
-          <div class="product-card__desc">I'll be honest: I assumed this was going to be another generic massage gun in a fancy box. I was wrong. The REVOMADIC hits 3,200 RPM at its highest setting, which puts it in Theragun territory, but it does it at under 45 decibels — quiet enough to use during a phone call without the other person noticing. The real differentiator is the heated attachment head. It warms to about 110°F in under 30 seconds and makes a noticeable difference on tight shoulders and lower-back knots compared to percussion alone. The full accessory kit includes six heads (flat, bullet, fork, air-cushion, heated, and a wedge), a carrying case, and a USB-C charging cable. Battery lasts about 3.5 hours in our testing, which tracks with their claim of "up to 4 hours." Build quality feels like a $200 device — the brushed aluminum body has a satisfying weight, and none of the attachment heads wobble or rattle. At $98 (down from $149 through the holiday), it's an absurd value for anyone who exercises, sits at a desk, or has a body.</div>
-          <ul class="product-card__pros">
-            <li>3,200 RPM with under 45 dB noise — remarkably quiet</li>
-            <li>Heated attachment head reaches 110°F in 30 seconds</li>
-            <li>Full 6-head accessory kit and carrying case included</li>
-          </ul>
-          <button class="buy-btn" onclick="goShop('revomadic','REVO15',this)">$98 at REVOMADIC</button>
-          <div class="promo-note">Use code <strong>REVO15</strong> for an extra 15% off · <button class="copy-link" onclick="copyCode('REVO15',this)">copy code</button></div>
+        <div class="deal-card">
+          <div class="deal-card__brand">REVOMADIC</div>
+          <div class="deal-card__offer">Extra 15% off</div>
+          <div class="deal-card__code" onclick="copyCode('REVO15',this)">REVO15</div>
+          <button class="deal-card__btn" onclick="goShop('revomadic','REVO15',this)">Shop REVOMADIC →</button>
+        </div>
+        <div class="deal-card">
+          <div class="deal-card__brand">Tinggly</div>
+          <div class="deal-card__offer">10% off gift boxes</div>
+          <div class="deal-card__code" onclick="copyCode('WELCOME10',this)">WELCOME10</div>
+          <button class="deal-card__btn" onclick="goShop('tinggly','WELCOME10',this)">Shop Tinggly →</button>
+        </div>
+        <div class="deal-card">
+          <div class="deal-card__brand">Bluetti</div>
+          <div class="deal-card__offer">$50 off power stations</div>
+          <div class="deal-card__code" onclick="copyCode('BLUETTI50',this)">BLUETTI50</div>
+          <button class="deal-card__btn" onclick="goShop('bluetti','BLUETTI50',this)">Shop Bluetti →</button>
+        </div>
+        <div class="deal-card">
+          <div class="deal-card__brand">JMGO</div>
+          <div class="deal-card__offer">$100 off projectors</div>
+          <div class="deal-card__code" onclick="copyCode('JMGO100',this)">JMGO100</div>
+          <button class="deal-card__btn" onclick="goShop('jmgo','JMGO100',this)">Shop JMGO →</button>
         </div>
       </div>
-    </div>
 
-    <!-- Product 5: Tinggly -->
-    <div class="product-card" id="tinggly" data-product-id="tinggly" data-product-name="Tinggly Experience Gift Box" data-product-price="351">
-      <div class="product-card__label product-card__label--lastmin">Best for last-minute gifting</div>
-      <div class="product-card__inner">
-        <div class="product-card__img">
-          <img src="images/tinggly.jpg" alt="Tinggly Experience Gift Box" style="width:100%;height:100%;object-fit:cover;">
+      <!-- Last-minute banner -->
+      <div class="lastmin-banner">
+        <div class="lastmin-banner__text">
+          <h3>⏰ Last-Minute Gift? We've Got You.</h3>
+          <p>Tinggly e-vouchers and StoryWorth digital cards deliver instantly — even on Christmas Eve at 11:59 PM.</p>
         </div>
-        <div class="product-card__body">
-          <div class="product-card__name">Tinggly Experience Gift Box</div>
-          <div class="product-card__price">$351 to $458 · Instant e-voucher delivery</div>
-          <div class="product-card__desc">Tinggly is the gift you buy at 11:47 PM on December 24th that somehow doesn't feel like you bought it at 11:47 PM on December 24th. It's an experience gift platform with over 10,000 curated adventures across 100+ countries — everything from hot-air balloon rides in Cappadocia to cooking classes in Barcelona to whale-watching off Maui. You pick a gift box tier (we tested the "Spectacular" at $351 and the "Ultimate" at $458), and the recipient chooses their own experience whenever they're ready. The voucher never expires, which is a critical detail. There's no awkward "use it by March or lose it" pressure. We tested the redemption flow ourselves: the booking platform is clean, availability was accurate, and confirmation emails arrived instantly. The presentation is polished too — the digital gift card includes a personalized message and lands in the recipient's inbox looking sharp.</div>
-          <p>Why it's the last-minute hero: everything is digital. You can purchase and send a Tinggly gift box at 11:59 PM on Christmas Eve and it arrives immediately. No shipping, no wrapping, no tracking numbers. Just an elegant email your recipient opens on their phone. We've verified this works — we placed a test order on a Sunday night and the voucher was delivered in under two minutes.</p>
-          <ul class="product-card__pros">
-            <li>10,000+ experiences across 100+ countries</li>
-            <li>Instant e-voucher — can send Dec. 24 at 11:59 PM</li>
-            <li>Voucher never expires; no pressure to book immediately</li>
-          </ul>
-          <button class="buy-btn" onclick="goShop('tinggly','WELCOME10',this)">$351+ at Tinggly</button>
-          <div class="promo-note">Use code <strong>WELCOME10</strong> for 10% off · <button class="copy-link" onclick="copyCode('WELCOME10',this)">copy code</button></div>
-        </div>
+        <button class="lastmin-banner__btn" onclick="goShop('tinggly','WELCOME10',this)">Send Tinggly Now →</button>
       </div>
     </div>
+  </section>
 
-    <!-- ============================== -->
-    <!-- SECTION: For the Tech Enthusiast -->
-    <!-- ============================== -->
-    <hr class="section-divider">
-    <h3>For the Tech Enthusiast</h3>
-    <h2>Two big-ticket gifts people rave about for years</h2>
-
-    <p>These aren't impulse buys. They're the kind of gifts that fundamentally change a routine — how someone watches movies, or how they handle a power outage. Both are premium, both justify their price tags, and both will make you the favorite gift-giver for a very long time.</p>
-
-    <!-- Product 6: Bluetti -->
-    <div class="product-card" id="bluetti" data-product-id="bluetti" data-product-name="Bluetti Portable Power Station" data-product-price="899">
-      <div class="product-card__label product-card__label--great">Best for homeowners</div>
-      <div class="product-card__inner">
-        <div class="product-card__img">
-          <img src="images/bluetti.jpg" alt="Bluetti Portable Power Station" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-        <div class="product-card__body">
-          <div class="product-card__name">Bluetti Portable Power Station (AC180 / AC200)</div>
-          <div class="product-card__price">$899 to $1,499 · Ships by Dec. 16</div>
-          <div class="product-card__desc">We tested the Bluetti AC180 through a real four-hour power outage in October, and it ran our refrigerator, a floor lamp, and two phones simultaneously without breaking a sweat. The 1,152Wh capacity on the AC180 is enough to power essential appliances for a full evening, and the larger AC200 (2,048Wh) can push through an overnight outage and still have juice left for morning coffee. Charging is fast — the AC180 goes from zero to 80% in about 45 minutes via wall outlet, which feels almost unreasonably quick for a unit this size. Both models support solar panel input, so they double as off-grid power for camping and tailgating. Build quality is excellent: the units feel like industrial equipment in the best way, with solid handles, clear LCD status displays, and rubber feet that don't slide on hardwood. Winter storms are unpredictable, and this is the kind of gift that sits in a closet being boring until the one night you desperately need it — and then it becomes the best purchase you've ever made. Holiday bundles currently save up to $450 and include solar panels and accessory cables.</div>
-          <ul class="product-card__pros">
-            <li>1,152Wh–2,048Wh capacity — runs a fridge overnight</li>
-            <li>Charges to 80% in ~45 minutes via wall outlet</li>
-            <li>Holiday bundles save up to $450 with solar panels</li>
-          </ul>
-          <button class="buy-btn" onclick="goShop('bluetti','BLUETTI50',this)">$899+ at Bluetti</button>
-          <div class="promo-note">Use code <strong>BLUETTI50</strong> for $50 off · <button class="copy-link" onclick="copyCode('BLUETTI50',this)">copy code</button></div>
-        </div>
+  <!-- ==================== DISCLOSURE ==================== -->
+  <section class="section section--alt">
+    <div class="container--narrow">
+      <div class="disclosure">
+        <p><strong>How we test and pick:</strong> Every product on this page was evaluated on a 10-point scale across four categories: wow factor, value for money, shipping reliability, and return policy. Only items scoring 8.0 or higher made our final guide.</p>
+        <p style="margin-top:8px"><strong>Editorial disclosure:</strong> The Curated Living is an independent publication. When you buy through links on this page, we may earn a commission at no extra cost to you. This does not affect our editorial ratings, product placement, or the order in which items appear.</p>
       </div>
     </div>
+  </section>
 
-    <!-- Product 7: JMGO -->
-    <div class="product-card" id="jmgo" data-product-id="jmgo" data-product-name="JMGO 4K Laser Projector" data-product-price="799">
-      <div class="product-card__label product-card__label--great">Best for entertainment</div>
-      <div class="product-card__inner">
-        <div class="product-card__img">
-          <img src="images/jmgo.jpg" alt="JMGO 4K Laser Projector" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-        <div class="product-card__body">
-          <div class="product-card__name">JMGO N1 Ultra 4K Laser Projector</div>
-          <div class="product-card__price">$799 to $1,299 · Ships by Dec. 17</div>
-          <div class="product-card__desc">I set up the JMGO N1 Ultra in my living room expecting to test it for a week and take it down. That was three months ago, and the 65-inch TV it replaced is still leaning against the wall in the guest room. The image quality at 150 inches is genuinely stunning — this is a triple-laser projector producing 2,200 ANSI lumens, which means it's watchable even with some ambient light (though a dark room is still better for movie nights). The killer feature is the gimbal-based auto-focus and auto-keystone system. You plonk the projector down anywhere — a coffee table, a bookshelf, slightly off-angle — and it corrects geometry and focus automatically in about two seconds. No manual fiddling, no tripod required. The built-in Dynaudio speakers are surprisingly competent; we didn't feel the need to add a soundbar for casual viewing, though you can via Bluetooth or HDMI ARC. Google TV is baked in, so Netflix, Disney+, YouTube, and the rest are all native apps. The build itself is compact (about the size of a small toaster oven) and looks like a piece of design furniture rather than tech equipment. If someone on your list has ever mentioned wanting a home theater setup but hasn't pulled the trigger, this is the push they need.</div>
-          <ul class="product-card__pros">
-            <li>True 4K resolution at up to 150" — replaces a TV</li>
-            <li>Gimbal auto-focus and auto-keystone — no manual setup</li>
-            <li>Built-in Dynaudio speakers and Google TV</li>
-          </ul>
-          <button class="buy-btn" onclick="goShop('jmgo','JMGO100',this)">$799+ at JMGO</button>
-          <div class="promo-note">Use code <strong>JMGO100</strong> for $100 off · <button class="copy-link" onclick="copyCode('JMGO100',this)">copy code</button></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ============================== -->
-    <!-- Rejected Section               -->
-    <!-- ============================== -->
-    <div class="rejected">
-      <h2>What we tested but didn't include</h2>
-      <p>Transparency matters. Here's why a few popular options didn't make our final cut.</p>
-      <div class="rejected-grid">
-        <div class="rejected-item"><strong>ArtPix 3D Crystal</strong><p>Looks great in ads, but the engravings come out blurry on complex photos. Novelty wears off fast.</p></div>
-        <div class="rejected-item"><strong>Generic Amazon gift sets</strong><p>Inconsistent quality, paper-thin margins, and no meaningful return guarantee.</p></div>
-        <div class="rejected-item"><strong>Peloton / Mirror</strong><p>Requires an ongoing subscription commitment. Risky to gift without knowing the recipient's fitness habits.</p></div>
-        <div class="rejected-item"><strong>Wine &amp; whiskey subscriptions</strong><p>State shipping laws make delivery unpredictable. Can't guarantee arrival by Dec. 24 in many areas.</p></div>
-      </div>
-    </div>
-
-    <!-- ============================== -->
-    <!-- Disclosure                     -->
-    <!-- ============================== -->
-    <div class="disclosure">
-      <h2 style="font-size:16px; margin-bottom:12px;">How we test and pick</h2>
-      <p>Every product on this list was evaluated on a 10-point scale across four categories: wow factor, value for money, shipping reliability, and return policy. Only items scoring 8.0 or higher made our final guide. We re-test annually and remove anything that no longer meets our standards.</p>
-      <p><strong>Editorial disclosure:</strong> The Curated Living is an independent publication. When you buy through links on this page, we may earn a commission at no extra cost to you. This does not affect our editorial ratings, product placement, or the order in which items appear. All prices and promotions were verified at the time of publication but may change.</p>
-    </div>
-
-  </article>
-
+  <!-- ==================== FOOTER ==================== -->
   <footer class="site-footer">
     <div class="site-footer__inner">
       <div>
@@ -296,5 +438,46 @@
   </footer>
 
   <script src="js/tracking.js"></script>
+  <script>
+  /* Tab filtering */
+  function showTab(cat, btn) {
+    document.querySelectorAll('.tab').forEach(function(t) { t.classList.remove('active'); });
+    btn.classList.add('active');
+    document.querySelectorAll('.gift-card').forEach(function(card) {
+      if (cat === 'all') { card.style.display = ''; return; }
+      var recipients = (card.dataset.recipient || '').split(',');
+      card.style.display = recipients.includes(cat) ? '' : 'none';
+    });
+  }
+
+  /* Finder filter + scroll */
+  function filterAndScroll() {
+    var who = document.getElementById('finder-who').value;
+    var budget = document.getElementById('finder-budget').value;
+    var delivery = document.getElementById('finder-delivery').value;
+    var cards = document.querySelectorAll('.gift-card');
+    var anyVisible = false;
+
+    cards.forEach(function(card) {
+      var show = true;
+      if (who && !(card.dataset.recipient || '').split(',').includes(who)) show = false;
+      if (budget && card.dataset.budget !== budget) show = false;
+      if (delivery && card.dataset.delivery !== delivery) show = false;
+      card.style.display = show ? '' : 'none';
+      if (show) anyVisible = true;
+    });
+
+    /* If nothing matches, show all */
+    if (!anyVisible) {
+      cards.forEach(function(card) { card.style.display = ''; });
+    }
+
+    /* Reset tabs visual */
+    document.querySelectorAll('.tab').forEach(function(t) { t.classList.remove('active'); });
+    document.querySelector('.tab').classList.add('active');
+
+    document.getElementById('gifts').scrollIntoView({ behavior: 'smooth' });
+  }
+  </script>
 </body>
 </html>

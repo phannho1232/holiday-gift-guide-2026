@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Curated Living — Independent Product Reviews &amp; Gift Guides</title>
-  <meta name="description" content="Independent, hands-on product reviews and gift guides. We test everything we recommend so you can shop with confidence.">
-  <meta property="og:title" content="The Curated Living — Independent Product Reviews &amp; Gift Guides">
-  <meta property="og:description" content="Independent, hands-on product reviews and gift guides. We test everything we recommend so you can shop with confidence.">
+  <title>The Curated Living — Christmas Gift Guide 2026</title>
+  <meta name="description" content="Find the perfect Christmas gift for everyone on your list. Independent, hands-on reviews of 7 expert-tested picks from $98 to $1,499.">
+  <meta property="og:title" content="The Curated Living — Christmas Gift Guide 2026">
+  <meta property="og:description" content="Find the perfect Christmas gift. 7 expert-tested picks from $98 to $1,499.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="images/hero.jpg">
+  <meta property="og:image" content="images/hero-christmas.jpg">
   <link rel="stylesheet" href="css/style.css">
   <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','YOUR_PIXEL_ID');fbq('track','PageView');</script>
 </head>
@@ -27,66 +27,102 @@
   </header>
 
   <!-- Hero -->
-  <section class="home-hero">
-    <div class="home-hero__inner">
-      <div>
-        <div class="home-hero__category">Gift Guides</div>
-        <h1 class="home-hero__title"><a href="gift-guide.html">The 7 Best Holiday Gifts of 2026</a></h1>
-        <p class="home-hero__dek">We spent over 200 hours testing this year's most-hyped gifts — from bamboo bedding to portable massagers — so you don't have to. Here are the ones actually worth giving.</p>
-        <p class="home-hero__meta">By <strong>Eleanor Vance</strong> · Nov 2026</p>
-      </div>
-      <div class="home-hero__img">
-        <img src="images/hero.jpg" alt="Holiday gift guide hero image featuring curated gift picks for 2026">
+  <section class="hero">
+    <div class="hero__bg">
+      <img src="images/hero-christmas.jpg" alt="Christmas Gift Guide Hero">
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <div class="hero__eyebrow">🎄 Christmas 2026</div>
+      <h1 class="hero__title">Find the perfect gift for everyone on your list</h1>
+      <p class="hero__subtitle">We tested over 40 holiday gifts and selected 7 that people actually keep, use, and talk about. Let our editors guide you to the right choice.</p>
+      <a href="gift-guide.html" class="finder__btn" style="display:inline-block;text-align:center;text-decoration:none;">Explore Our Gift Guide →</a>
+    </div>
+  </section>
+
+  <!-- Featured Picks -->
+  <section class="section">
+    <div class="container">
+      <div class="section__eyebrow">Editor's Picks</div>
+      <h2 class="section__title">This Season's Standout Gifts</h2>
+      <p class="section__desc">These three earned the highest scores across our testing — the gifts our editors would put under their own tree.</p>
+
+      <div class="gifts-grid">
+
+        <!-- Cozy Earth -->
+        <div class="gift-card" data-product-id="cozyearth" data-product-name="Cozy Earth Bamboo Bedding Bundle" data-product-price="471">
+          <div class="gift-card__img">
+            <span class="gift-card__badge gift-card__badge--pick">Our Top Pick</span>
+            <img src="images/cozyearth.jpg" alt="Cozy Earth Bamboo Bedding Bundle">
+          </div>
+          <div class="gift-card__body">
+            <div class="gift-card__for">Partner &amp; Parents</div>
+            <h3 class="gift-card__name">Cozy Earth Bamboo Bedding Bundle</h3>
+            <div class="gift-card__price">From $471 · Free 2-day shipping</div>
+            <p class="gift-card__why">Oprah's Favorite Things 5 years running. Buttery bamboo viscose that stays cool in summer and warm in winter. Bundle saves 35%.</p>
+            <div class="gift-card__meta">
+              <span>📦 Free 2-day ship</span>
+              <span>↩️ 100-night trial</span>
+              <span>🎁 Gift-ready</span>
+            </div>
+            <button class="gift-card__cta" onclick="goShop('cozyearth','CE-LORNA',this)">Shop Cozy Earth →</button>
+            <div class="gift-card__code">Use code <button onclick="copyCode('CE-LORNA',this)">CE-LORNA</button> for 20% off</div>
+          </div>
+        </div>
+
+        <!-- REVOMADIC -->
+        <div class="gift-card" data-product-id="revomadic" data-product-name="REVOMADIC Deep-Tissue Massager" data-product-price="98">
+          <div class="gift-card__img">
+            <span class="gift-card__badge gift-card__badge--value">Best Value</span>
+            <img src="images/revomadic.webp" alt="REVOMADIC Deep-Tissue Massager">
+          </div>
+          <div class="gift-card__body">
+            <div class="gift-card__for">Anyone Who Has a Body</div>
+            <h3 class="gift-card__name">REVOMADIC Deep-Tissue Massager</h3>
+            <div class="gift-card__price">$98 (was $149) · Ships by Dec 19</div>
+            <p class="gift-card__why">3,200 RPM at under 45dB. Heated attachment reaches 110°F in 30 seconds. Feels like a $200 device. The perfect gift for desk workers, athletes, or anyone with tension.</p>
+            <div class="gift-card__meta">
+              <span>📦 Ships Dec 19</span>
+              <span>↩️ 30-day return</span>
+              <span>🎁 6-head kit included</span>
+            </div>
+            <button class="gift-card__cta" onclick="goShop('revomadic','REVO15',this)">Shop REVOMADIC →</button>
+            <div class="gift-card__code">Use code <button onclick="copyCode('REVO15',this)">REVO15</button> for 15% off</div>
+          </div>
+        </div>
+
+        <!-- Tinggly -->
+        <div class="gift-card" data-product-id="tinggly" data-product-name="Tinggly Experience Gift Box" data-product-price="351">
+          <div class="gift-card__img">
+            <span class="gift-card__badge gift-card__badge--lastmin">Last-Minute Hero</span>
+            <img src="images/tinggly.jpg" alt="Tinggly Experience Gift Box">
+          </div>
+          <div class="gift-card__body">
+            <div class="gift-card__for">Partner &amp; Experience Lovers</div>
+            <h3 class="gift-card__name">Tinggly Experience Gift Box</h3>
+            <div class="gift-card__price">From $351 · Instant e-voucher</div>
+            <p class="gift-card__why">10,000+ experiences across 100+ countries. Send at 11:59 PM on Christmas Eve and it arrives instantly. Voucher never expires. The elegant last-minute save.</p>
+            <div class="gift-card__meta">
+              <span>📦 Instant delivery</span>
+              <span>↩️ Never expires</span>
+              <span>🎁 100+ countries</span>
+            </div>
+            <button class="gift-card__cta" onclick="goShop('tinggly','WELCOME10',this)">Shop Tinggly →</button>
+            <div class="gift-card__code">Use code <button onclick="copyCode('WELCOME10',this)">WELCOME10</button> for 10% off</div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Articles Grid -->
-  <section class="articles-grid">
-    <h2 class="articles-grid__title">Latest Reviews</h2>
-    <ul class="articles-grid__list">
-
-      <li class="article-card">
-        <div class="article-card__img"><img src="images/cozyearth.jpg" alt="Cozy Earth Bedding" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="article-card__body">
-          <div class="article-card__cat">Bedding</div>
-          <h3 class="article-card__title"><a href="reviews/cozy-earth.html">Cozy Earth Bamboo Bedding Bundle Review</a></h3>
-          <p class="article-card__excerpt">We slept on Cozy Earth's bamboo sheets for 30 nights. Here's whether the celebrity-endorsed bedding lives up to the hype.</p>
-          <div class="article-card__meta">Nov 2026</div>
-        </div>
-      </li>
-
-      <li class="article-card">
-        <div class="article-card__img"><img src="images/revomadic.webp" alt="REVOMADIC Massager" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="article-card__body">
-          <div class="article-card__cat">Wellness</div>
-          <h3 class="article-card__title"><a href="reviews/revomadic.html">Is the REVOMADIC Massager Worth It?</a></h3>
-          <p class="article-card__excerpt">A deep-tissue massage gun that folds flat for travel. We tested it against Therabody and Hyperice to find the real winner.</p>
-          <div class="article-card__meta">Nov 2026</div>
-        </div>
-      </li>
-
-      <li class="article-card">
-        <div class="article-card__img"><img src="images/tinggly.jpg" alt="Tinggly Gift Box" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="article-card__body">
-          <div class="article-card__cat">Experiences</div>
-          <h3 class="article-card__title"><a href="reviews/tinggly.html">Tinggly Experience Box: The Last-Minute Gift That Actually Works</a></h3>
-          <p class="article-card__excerpt">Need a meaningful gift in minutes? Tinggly lets recipients choose from hundreds of experiences worldwide. We put it to the test.</p>
-          <div class="article-card__meta">Nov 2026</div>
-        </div>
-      </li>
-
-    </ul>
-  </section>
-
-  <!-- Newsletter -->
-  <section class="newsletter">
-    <h2 class="newsletter__title">Get Our Gift Picks</h2>
-    <p class="newsletter__desc">Join 12,000+ readers who get our best deals and gift recommendations delivered every week. No spam, ever.</p>
-    <form class="newsletter__form" onsubmit="return false;">
-      <input type="email" class="newsletter__input" placeholder="Your email address" aria-label="Email address">
-      <button type="submit" class="newsletter__btn">Subscribe</button>
-    </form>
+  <!-- Full Guide CTA -->
+  <section class="section section--alt">
+    <div class="container" style="text-align:center;">
+      <h2 class="section__title" style="margin-left:auto;margin-right:auto;">See the Complete Gift Guide</h2>
+      <p class="section__desc" style="margin-left:auto;margin-right:auto;">See all 7 picks, side-by-side comparisons, and verified promo codes in our complete guide.</p>
+      <a href="gift-guide.html" class="finder__btn" style="display:inline-block;text-align:center;text-decoration:none;">View Full Gift Guide →</a>
+    </div>
   </section>
 
   <!-- Footer -->
